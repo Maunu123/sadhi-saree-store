@@ -1,0 +1,143 @@
+/* =========================
+   NEW ARRIVAL PAGE
+========================= */
+
+.new-arrival-page {
+  padding: 40px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.new-arrival-page h1 {
+  text-align: center;
+  color: #ff3f6c;
+  margin-bottom: 35px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.new-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* =========================
+   PRODUCT LINK
+========================= */
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-link:hover {
+  color: inherit;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.img-box {
+  position: relative;
+}
+
+.img-box img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff3f6c;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.card h3 {
+  padding: 15px 15px 5px;
+  font-size: 18px;
+  color: #222;
+}
+
+.card p {
+  padding: 0 15px;
+  color: #777;
+  font-size: 15px;
+}
+
+.card h4 {
+  padding: 12px 15px 18px;
+  color: #ff3f6c;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .new-arrival-page {
+    padding: 20px;
+  }
+
+  .new-arrival-page h1 {
+    font-size: 2rem;
+  }
+
+  .new-products {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .img-box img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-products {
+    grid-template-columns: 1fr;
+  }
+
+  .img-box img {
+    height: 300px;
+  }
+}

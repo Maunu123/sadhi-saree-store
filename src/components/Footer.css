@@ -1,0 +1,137 @@
+.footer {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #fff;
+  margin-top: 80px;
+  border-top: 4px solid #ec4899;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h2 {
+  font-size: 2rem;
+  color: #ec4899;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  color: #f9a8d4;
+}
+
+.footer-section p {
+  color: #d1d5db;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.footer-section ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #ec4899;
+  transition: width 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-section ul li a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #ec4899;
+  transform: translateY(-5px) scale(1.1);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .footer-container {
+    gap: 30px;
+    padding: 50px 20px;
+  }
+
+  .footer-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .footer-container {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+}

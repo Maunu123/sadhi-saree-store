@@ -1,0 +1,169 @@
+.details-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Images Section */
+
+.details-image {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.thumbnail:hover {
+  border-color: #ff3f6c;
+}
+
+/* Product Details */
+
+.details-content {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+}
+
+.details-content h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #282c3f;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 700;
+  color: #282c3f;
+  margin: 15px 0;
+}
+
+.category {
+  color: #7e818c;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #535766;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.brand,
+.color,
+.fabric,
+.reviews {
+  margin-bottom: 12px;
+  color: #282c3f;
+  font-size: 15px;
+}
+
+.brand strong,
+.color strong,
+.fabric strong,
+.reviews strong {
+  margin-right: 8px;
+}
+.rate-product {
+  margin-top: 20px;
+}
+
+.rate-product span {
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Buttons */
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cart-btn {
+  width: 220px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background: #ff3f6c;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cart-btn:hover {
+  background: #e6335f;
+}
+
+.wishlist-btn {
+  width: 180px;
+  height: 50px;
+  border: 1px solid #d4d5d9;
+  background: white;
+  color: #282c3f;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.wishlist-btn:hover {
+  border-color: #ff3f6c;
+  color: #ff3f6c;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+  }
+
+  .details-image {
+    grid-template-columns: 1fr;
+  }
+
+  .details-image img {
+    height: auto;
+  }
+
+  .details-content {
+    position: static;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .cart-btn,
+  .wishlist-btn {
+    width: 100%;
+  }
+}  

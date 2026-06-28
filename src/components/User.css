@@ -1,0 +1,214 @@
+.user-page{
+    background:#f5f5f5;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* ================= Profile ================= */
+
+.profile-card{
+    width:700px;
+    background:#fff;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+.profile-icon{
+    font-size:90px;
+    color:#ff3f6c;
+}
+
+.profile-card h2{
+    margin-top:15px;
+    color:#222;
+}
+
+.profile-card p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:14px;
+    padding:25px;
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card svg{
+    font-size:34px;
+    color:#ff3f6c;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.logout svg{
+    color:red;
+}
+
+/* ================= Modal Overlay ================= */
+
+.modal-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgb(155 128 137 / 0%);
+    backdrop-filter:blur(1px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    animation:fadeIn .3s ease;
+}
+
+/* ================= Modal ================= */
+
+.edit-profile{
+    width:420px;
+    max-height: 80%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    animation:popup .35s ease;
+}
+.edit-profile .header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+}
+
+.edit-profile .header h3{
+    text-align:center;
+  
+    color:#0d47a1;
+    font-size:1rem;
+}
+.edit-profile .edit-wrapper {
+    padding: 20px;
+}
+.edit-profile .edit-wrapper input{
+    width:100%;
+    padding:13px 15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+    box-sizing:border-box;
+}
+
+.edit-profile .edit-wrapper  input:focus{
+    border-color:#1565c0;
+    box-shadow:0 0 8px rgba(21,101,192,.25);
+}
+
+/* ================= Buttons ================= */
+
+.edit-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:10px;
+}
+
+.edit-buttons button{
+    flex:1;
+    padding:13px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.edit-buttons button:first-child{
+    background:#1565c0;
+    color:white;
+}
+
+.edit-buttons button:first-child:hover{
+    background:#0d47a1;
+}
+
+.edit-buttons button:last-child{
+    background:#757575;
+    color:white;
+}
+
+.edit-buttons button:last-child:hover{
+    background:#555;
+}
+
+/* ================= Animation ================= */
+
+@keyframes popup{
+    from{
+        transform:scale(.75);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+
+    .profile-card{
+        width:100%;
+        padding:25px;
+    }
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .edit-profile{
+        width:90%;
+      
+    }
+}
