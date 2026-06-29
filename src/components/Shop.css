@@ -4,12 +4,12 @@
 
 .shop-page {
   padding: 40px 13px;
-  background: #f9f9f9;
+  background: var(--light-bg);
   min-height: 100vh;
 }
 
 .breadcrumb {
-  color: #777;
+  color: var(--text-muted);
   margin-bottom: 20px;
   font-size: 14px;
 }
@@ -27,17 +27,17 @@
 
 .shop-header h1 {
   font-size: 2.5rem;
-  color: #222;
+  color: var(--dark-color);
   margin-bottom: 5px;
 }
 
 .shop-header p {
-  color: #666;
+  color: var(--text-muted);
 }
 
 .shop-header select {
   padding: 10px 15px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   background: white;
   cursor: pointer;
@@ -70,18 +70,18 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  color: #222;
+  color: var(--dark-color);
 }
 
 .filters h3 span {
-  color: #ec4899;
+  color: var(--secondary-color);
   cursor: pointer;
   font-size: 14px;
 }
 
 .filters h4 {
   margin: 20px 0 12px;
-  color: #ec4899;
+  color: var(--secondary-color);
 }
 
 .price-filter {
@@ -105,7 +105,7 @@
   appearance: none;
   width: 2px;
   height: 2px;
-  background: #ff3f6c; /* Myntra-like pink */
+  background: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
   margin-top: -5px;
@@ -119,7 +119,7 @@
 .filters label {
   display: block;
   margin-bottom: 10px;
-  color: #555;
+  color: var(--medium-gray-text);
   cursor: pointer;
 }
 
@@ -146,7 +146,7 @@
   height: 24px;
   border-radius: 50%;
   cursor: pointer;
-  border: 2px solid #eee;
+  border: 2px solid var(--border-color);
 }
 
 .colors span:nth-child(1) {
@@ -176,6 +176,7 @@
 .colors span:nth-child(7) {
   background: green;
 }
+
 /* =========================
    PRODUCTS GRID
 ========================= */
@@ -185,9 +186,9 @@
   padding: 8px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* grid-template-rows:repeat(auto-fill, minmax(170px, 1fr)); ; */
   gap: 10px;
 }
+
 /* Product Link */
 
 .product-link {
@@ -227,7 +228,7 @@
 
 .img-box img {
   width: 100%;
- height: 208px;
+  height: 208px;
   object-fit: cover;
   object-position: center top;
 }
@@ -238,7 +239,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  background: #ec4899;
+  background: var(--secondary-color);
   color: white;
   padding: 5px 12px;
   border-radius: 20px;
@@ -265,17 +266,17 @@
 .card h3 {
   padding: 15px 15px 5px;
   font-size: 1rem;
-  color: #222;
+  color: var(--dark-color);
 }
 
 .card p {
   padding: 0 15px;
-  color: #777;
+  color: var(--text-muted);
 }
 
 .card h4 {
   padding: 10px 15px 20px;
-  color: #ec4899;
+  color: var(--secondary-color);
   font-size: 1.2rem;
 }
 
@@ -294,7 +295,7 @@
 .pagination button {
   width: 40px;
   height: 40px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   background: white;
   border-radius: 8px;
   cursor: pointer;
@@ -303,11 +304,10 @@
 
 .pagination button:hover,
 .pagination .active {
-  background: #ec4899;
+  background: var(--secondary-color);
   color: white;
-  border-color: #ec4899;
+  border-color: var(--secondary-color);
 }
-
 
 /* =========================
    RESPONSIVE
@@ -335,9 +335,9 @@
   }
 
   .img-box img {
-   height: 208px;
-  object-fit: cover;
-  object-position: center top;
+    height: 208px;
+    object-fit: cover;
+    object-position: center top;
   }
 }
 

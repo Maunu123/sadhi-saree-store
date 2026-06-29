@@ -1,3 +1,47 @@
-:root{
-    --primary_background: #f7d2d8;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+  /* Brand Theme Colors */
+  --primary-background: #f7d2d8;
+  --primary-color: #ff3f6c;      /* Vibrant Red/Pink for main action buttons and active indicators */
+  --primary-color-hover: #e02e59;/* Slightly darker red/pink for button hover states */
+  --secondary-color: #E54A7A;    /* Elegant Brand Pink for logo text and secondary links */
+  --accent-color: #349699;       /* Deep Teal for Place Order buttons and positive actions */
+  --accent-color-hover: #2a7c7f; /* Darker teal for button hover states */
+  --nav-bg: #d672b5;             /* Lavender Pink for global Navbar background */
+  
+  /* Text and Neutral Colors */
+  --dark-color: #222222;         /* Main text and headers color */
+  --text-muted: #666666;         /* Descriptive subtitles and secondary labels */
+  --light-bg: #f5f5f5;           /* Page backgrounds and soft borders */
+  --border-color: #dddddd;       /* Standard borders */
+
+  /* Common Utility Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --success-color: #4caf50;
+  --success-bg: #eef9f0;
+  --success-border: #c8e6c9;
+  --info-bg: #fff4f6;
+  --info-border: #ffccd5;
+  --info-hover-bg: #ffebeb;
+  --light-pink-bg: #ffe3e9;
+  --light-pink-bg-tint: #fff9fa;
+  --light-gray-border: #eee;
+  --light-gray-bg: #fafafa;
+  --medium-gray-text: #555555;
+  --medium-dark-text: #444444;
+  --dashed-border-color: #cccccc;
+}
+
+/* Apply the clean, high-readability Flipkart/Amazon-style font globally */
+* {
+  font-family: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcfcfc;
+  color: var(--dark-color);
 }
