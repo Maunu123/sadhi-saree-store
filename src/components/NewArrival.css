@@ -4,13 +4,13 @@
 
 .new-arrival-page {
   padding: 40px;
-  background: #f9f9f9;
+  background: var(--light-bg);
   min-height: 100vh;
 }
 
 .new-arrival-page h1 {
   text-align: center;
-  color: #ff3f6c;
+  color: var(--primary-color);
   margin-bottom: 35px;
   font-size: 2.5rem;
   font-weight: 700;
@@ -44,7 +44,7 @@
 ========================= */
 
 .card {
-  background: #fff;
+  background: var(--white);
   border-radius: 15px;
   overflow: hidden;
   transition: 0.3s ease;
@@ -79,7 +79,7 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  background: #ff3f6c;
+  background: var(--primary-color);
   color: white;
   padding: 6px 14px;
   border-radius: 20px;
@@ -94,18 +94,18 @@
 .card h3 {
   padding: 15px 15px 5px;
   font-size: 18px;
-  color: #222;
+  color: var(--dark-color);
 }
 
 .card p {
   padding: 0 15px;
-  color: #777;
+  color: var(--text-muted);
   font-size: 15px;
 }
 
 .card h4 {
   padding: 12px 15px 18px;
-  color: #ff3f6c;
+  color: var(--primary-color);
   font-size: 20px;
   font-weight: 700;
 }

@@ -36,7 +36,7 @@
 }
 
 .thumbnail:hover {
-  border-color: #ff3f6c;
+  border-color: var(--primary-color);
 }
 
 /* Product Details */
@@ -50,25 +50,25 @@
 .details-content h1 {
   font-size: 28px;
   font-weight: 600;
-  color: #282c3f;
+  color: var(--dark-color);
   margin-bottom: 10px;
 }
 
 .price {
   font-size: 30px;
   font-weight: 700;
-  color: #282c3f;
+  color: var(--dark-color);
   margin: 15px 0;
 }
 
 .category {
-  color: #7e818c;
+  color: var(--text-muted);
   font-size: 16px;
   margin-bottom: 20px;
 }
 
 .description {
-  color: #535766;
+  color: var(--text-muted);
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -78,7 +78,7 @@
 .fabric,
 .reviews {
   margin-bottom: 12px;
-  color: #282c3f;
+  color: var(--dark-color);
   font-size: 15px;
 }
 
@@ -111,7 +111,7 @@
   height: 50px;
   border: none;
   border-radius: 4px;
-  background: #ff3f6c;
+  background: var(--primary-color);
   color: white;
   font-size: 15px;
   font-weight: 700;
@@ -120,23 +120,23 @@
 }
 
 .cart-btn:hover {
-  background: #e6335f;
+  background: var(--primary-color-hover);
 }
 
 .wishlist-btn {
   width: 180px;
   height: 50px;
-  border: 1px solid #d4d5d9;
+  border: 1px solid var(--border-color);
   background: white;
-  color: #282c3f;
+  color: var(--dark-color);
   font-weight: 600;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .wishlist-btn:hover {
-  border-color: #ff3f6c;
-  color: #ff3f6c;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Mobile */
@@ -166,4 +166,4 @@
   .wishlist-btn {
     width: 100%;
   }
-}  
+}

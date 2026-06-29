@@ -5,7 +5,7 @@
 
 .wishlist-page h1 {
   margin-bottom: 30px;
-  color: #282c3f;
+  color: var(--dark-color);
 }
 
 .wishlist-item {
@@ -13,7 +13,7 @@
   gap: 20px;
   align-items: center;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -31,18 +31,19 @@
 
 .wishlist-info h3 {
   margin-bottom: 10px;
+  color: var(--dark-color);
 }
 
 .wishlist-info p {
   font-size: 20px;
-  color: #ff3f6c;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
 .cart-btn {
   padding: 12px 25px;
   border: none;
-  background: #ff3f6c;
+  background: var(--primary-color);
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -52,16 +53,16 @@
 .remove-btn {
   padding: 12px 25px;
   border: none;
-  background: #333;
+  background: var(--medium-dark-text);
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .cart-btn:hover {
-  background: #e73360;
+  background: var(--primary-color-hover);
 }
 
 .remove-btn:hover {
-  background: #000;
+  background: var(--black);
 }

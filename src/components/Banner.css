@@ -1,6 +1,6 @@
 .hero {
   min-height: 430px;
-  background: #f7d2d8;
+  background: var(--primary-background);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,7 +13,7 @@
 }
 
 .tagline {
-  color: #e54a7a;
+  color: var(--secondary-color);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -24,23 +24,23 @@
   font-family: Georgia, serif;
   font-size: 56px;
   line-height: 1.1;
-  color: #222;
+  color: var(--dark-color);
   margin-bottom: 24px;
 }
 
 .hero h1 span {
-  color: #e54a7a;
+  color: var(--secondary-color);
 }
 
 .hero-text {
   font-size: 18px;
   line-height: 1.7;
-  color: #333;
+  color: var(--text-muted);
   margin-bottom: 32px;
 }
 
 .shop-btn {
-  /* background: #e54a7a; */
+  /* background: var(--secondary-color); */
   position: relative;
   color: rgb(235, 231, 231);
   border: none;
@@ -63,7 +63,7 @@
     90deg,
     #ffd6e7,
     #ff69b4,
-    #ffffff,
+    var(--white),
     #ff69b4,
     #ffd6e7
   );
@@ -76,7 +76,7 @@
   content: "";
   position: absolute;
   inset: 0.001px;
- background:  #e54a7a;
+ background:  var(--secondary-color);
   border-radius: 10px;
   z-index: -1;
 }
@@ -110,7 +110,7 @@
 }
 
 .features {
-  background: #fff;
+  background: var(--white);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 28px 8%;
@@ -130,12 +130,12 @@
 .feature-box h4 {
   font-size: 16px;
   margin-bottom: 5px;
-  color: #222;
+  color: var(--dark-color);
 }
 
 .feature-box p {
   font-size: 14px;
-  color: #777;
+  color: var(--text-muted);
 }
 /* =========================
    TABLET RESPONSIVE
