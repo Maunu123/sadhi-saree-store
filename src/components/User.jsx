@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaUserCircle,
   FaShoppingBag,
@@ -9,66 +9,57 @@ import {
   FaEdit,
   FaSignOutAlt,
 } from "react-icons/fa";
+
+import { useAuth } from "../context/AuthContext";
+
 import "./User.css";
-import { useState } from "react";
 
 function User() {
+  const navigate = useNavigate();
+
+  const { currentUser, updateProfile, logout } = useAuth();
+
+  const address = JSON.parse(localStorage.getItem("address")) || {};
+
   const [isEditing, setIsEditing] = useState(false);
 
-  const [name, setName] = useState(localStorage.getItem("name") || "Your Name");
+  const [name, setName] = useState(currentUser?.name || "");
 
-  const [phone, setPhone] = useState(
-    localStorage.getItem("phone") || "9876543210",
-  );
+  const [email, setEmail] = useState(currentUser?.email || "");
 
-  const [email, setEmail] = useState(localStorage.getItem("email") || "email");
+  const [phone, setPhone] = useState(currentUser?.phone || "");
 
-  const [city, setCity] = useState(localStorage.getItem("city") || "city");
-
-  const [state, setState] = useState(localStorage.getItem("state") || "state");
-  const [pincode, setPincode] = useState(
-    localStorage.getItem("pincode") || "pincode",
-  );
   const saveProfile = () => {
-    localStorage.setItem("name", name);
-    localStorage.setItem("phone", phone);
-    localStorage.setItem("email", email);
-    localStorage.setItem("city", city);
-
-    localStorage.setItem("state", state);
-
-    localStorage.setItem("pincode", pincode);
+    updateProfile({
+      name,
+      email,
+      phone,
+    });
 
     alert("Profile Updated Successfully ✅");
-    setIsEditing(false);
 
-    setName("");
-    setEmail("");
-    setPhone("");
-    setCity("");
-    setState("");
-    setPincode("");
     setIsEditing(false);
   };
 
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, [isEditing]);
+  const handleLogout = () => {
+    logout();
+
+    alert("Logged Out Successfully");
+
+    navigate("/login");
+  };
 
   return (
     <div className="user-page">
       <div className="profile-card">
         <FaUserCircle className="profile-icon" />
 
-        <h2>Hello, Rimjhim 👋</h2>
+        <h2>Hello, {currentUser?.name} 👋</h2>
 
         <p>Welcome to SADHI Saree Store</p>
 
         <div className="dashboard">
-          <Link to="/checkout" className="card">
+          <Link to="/orders" className="card">
             <FaShoppingBag />
             <span>My Orders</span>
           </Link>
@@ -85,9 +76,10 @@ function User() {
 
           <div className="card">
             <FaMapMarkerAlt />
+
             <span>
-              {city && state && pincode
-                ? `${city}, ${state}, ${pincode}`
+              {address.city
+                ? `${address.city}, ${address.state}`
                 : "No Address"}
             </span>
           </div>
@@ -97,69 +89,45 @@ function User() {
             <span>Edit Profile</span>
           </div>
 
-          <div className="card logout" onClick={() => alert("Logged Out")}>
+          <div className="card logout" onClick={handleLogout}>
             <FaSignOutAlt />
             <span>Logout</span>
           </div>
         </div>
-      </div>
-      {isEditing && (
-        <div className="modal-overlay">
+
+        {isEditing && (
           <div className="edit-profile">
-            <div className="header">
-              <h3>Edit Profile</h3>
-            </div>
-            <div className="edit-wrapper">
-              <input
-                type="text"
-                placeholder="Full Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
+            <h3>Edit Profile</h3>
 
-              <input
-                type="text"
-                placeholder="Phone Number"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
-              <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              ></input>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
-              <input
-                type="text"
-                placeholder="City"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-              />
+            <input
+              type="text"
+              placeholder="Phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
 
-              <input
-                type="text"
-                placeholder="State"
-                value={state}
-                onChange={(e) => setState(e.target.value)}
-              />
+            <div className="edit-buttons">
+              <button onClick={saveProfile}>Save</button>
 
-              <input
-                type="text"
-                placeholder="Pincode"
-                value={pincode}
-                onChange={(e) => setPincode(e.target.value)}
-              />
-              <div className="edit-buttons">
-                <button onClick={saveProfile}>Save</button>
-
-                <button onClick={() => setIsEditing(false)}>Cancel</button>
-              </div>
+              <button onClick={() => setIsEditing(false)}>Cancel</button>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

@@ -95,10 +95,13 @@ function Checkout() {
         onChange={(e) => setPincode(e.target.value)}
       />
 
-      <button className="save-btn" onClick={saveAddress}>Save Address</button>
+      <button className="save-btn" onClick={saveAddress}>
+        Save Address
+      </button>
       <button className="place-order-btn" onClick={placeOrder}>
         Place Order
       </button>
+      <button className="continue-btn"  onClick={() => navigate("/payment")}>Continue to Payment</button>
     </div>
   );
 }

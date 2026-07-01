@@ -1,0 +1,142 @@
+/* ===========================
+   PAYMENT PAGE
+=========================== */
+
+.payment-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ===========================
+   PAYMENT CARD
+=========================== */
+
+.payment-card {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.payment-card h1 {
+  text-align: center;
+  color: #ff3f6c;
+  margin-bottom: 10px;
+}
+
+.payment-card p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* ===========================
+   PAYMENT OPTIONS
+=========================== */
+
+.payment-option {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-option label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.payment-option label:hover {
+  border-color: #ff3f6c;
+  background: #fff5f8;
+}
+
+.payment-option input[type="radio"] {
+  accent-color: #ff3f6c;
+  width: 18px;
+  height: 18px;
+}
+
+/* ===========================
+   TOTAL
+=========================== */
+
+.payment-total {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-total h2 {
+  color: #333;
+  font-size: 20px;
+}
+
+.payment-total h3 {
+  color: #ff3f6c;
+  font-size: 24px;
+}
+
+/* ===========================
+   PAY BUTTON
+=========================== */
+
+.pay-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  background: #ff3f6c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: #e6365f;
+  transform: translateY(-2px);
+}
+
+.pay-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 600px) {
+  .payment-card {
+    padding: 25px;
+  }
+
+  .payment-card h1 {
+    font-size: 28px;
+  }
+
+  .payment-total h2 {
+    font-size: 18px;
+  }
+
+  .payment-total h3 {
+    font-size: 22px;
+  }
+}

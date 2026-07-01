@@ -7,10 +7,11 @@ import { CartContext } from "../context/CartContext";
 
 import "./Navbar.css";
 import lotusLogo from "../assets/f.png";
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
   const { cartCount, wishlistCount } = useContext(CartContext);
-
+  const { currentUser } = useAuth();
   const navigate = useNavigate();
 
   const [search, setSearch] = useState("");
@@ -45,7 +46,6 @@ const Navbar = () => {
 
       {/* Right Side Icons */}
       <div className="nav-icons">
-
         {/* Search */}
         <div className="search-box">
           <input
@@ -60,25 +60,19 @@ const Navbar = () => {
             }}
           />
 
-          <FaSearch
-            className="search-icon"
-            onClick={handleSearch}
-          />
+          <FaSearch className="search-icon" onClick={handleSearch} />
         </div>
 
         {/* User */}
-        <Link to="/user">
+        <Link to={currentUser ? "/user" : "/login"} className="user-icon">
           <FaUser className="icon" />
         </Link>
-
         {/* Wishlist */}
         <Link to="/wishlist" className="wishlist-icon">
           <FiHeart />
 
           {wishlistCount > 0 && (
-            <span className="wishlist-count">
-              {wishlistCount}
-            </span>
+            <span className="wishlist-count">{wishlistCount}</span>
           )}
         </Link>
 
@@ -86,13 +80,8 @@ const Navbar = () => {
         <Link to="/cart" className="cart-icon">
           <FiShoppingBag />
 
-          {cartCount > 0 && (
-            <span className="cart-count">
-              {cartCount}
-            </span>
-          )}
+          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
         </Link>
-
       </div>
     </nav>
   );
