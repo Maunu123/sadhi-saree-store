@@ -76,7 +76,7 @@ const productList = [
     images: [redSilkSaree1, redSilkSaree2],
     category: "Silk Sarees",
     color: "red",
-    fabric: "silk",
+    fabricCategory: "silk",
     tag: "new",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
@@ -107,7 +107,7 @@ const productList = [
     images: [blueSilkSaree1,blueSilkSaree2,blueSilkSaree3],
     category: "Silk Sarees",
     color: "blue",
-    fabric: "silk",
+    fabricCategory: "silk",
     tag: "new",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
@@ -138,7 +138,7 @@ const productList = [
     images: [pinkSilkSaree1,pinkSilkSaree2],
     category: "Silk Sarees",
     color: "pink",
-    fabric: "silk",
+    fabricCategory: "silk",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -168,7 +168,7 @@ const productList = [
     images:[classicCottonSaree1,classicCottonSaree2,classicCottonSaree3,classicCottonSaree4],
     category: "Cotton Sarees",
     color: "pink",
-    fabric: "cotton",
+    fabricCategory: "cotton",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -176,7 +176,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -198,7 +198,7 @@ const productList = [
     images:[ handloomCottonSaree1, handloomCottonSaree2, handloomCottonSaree3, handloomCottonSaree4, handloomCottonSaree5],
     category: "Cotton Sarees",
     color: "orange",
-    fabric: "cotton",
+    fabricCategory: "cotton",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -206,7 +206,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -228,7 +228,7 @@ const productList = [
     images:[royalWeddingsaree1,royalWeddingsaree2,royalWeddingsaree3,royalWeddingsaree4,royalWeddingsaree5],
     category: "Wedding Sarees",
     color: "yellow",
-    fabric: "Georgette",
+    fabricCategory: "Georgette",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -236,7 +236,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -258,7 +258,7 @@ const productList = [
     images:[goldenWeddingSaree1,goldenWeddingSaree2,goldenWeddingSaree3,goldenWeddingSaree4,goldenWeddingSaree5],
     category: "Wedding Sarees",
     color: "yellow",
-    fabric: "Georgette",
+    fabricCategory: "Georgette",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -266,7 +266,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -288,7 +288,7 @@ const productList = [
     images:[partyDesignerSaree1,partyDesignerSaree2,partyDesignerSaree3,partyDesignerSaree4,partyDesignerSaree5],
     category: "Designer Sarees",
     color: "yellow",
-    fabric: "Georgette",
+    fabricCategory: "Georgette",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -296,7 +296,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -318,7 +318,7 @@ const productList = [
     images:[premiumDesignerSaree1,premiumDesignerSaree2,premiumDesignerSaree3,premiumDesignerSaree4],
     category: "Designer Sarees",
     color: "pink",
-    fabric: "Georgette",
+    fabricCategory: "Georgette",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -326,7 +326,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -348,7 +348,7 @@ const productList = [
     images:[specialFestiveSaree1,specialFestiveSaree2,specialFestiveSaree3,specialFestiveSaree4],
     category: "Festive Sarees",
     color: "green",
-    fabric: "Chiffon",
+    fabricCategory: "Chiffon",
      description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -356,7 +356,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -378,7 +378,7 @@ const productList = [
     images:[diwaliFestiveSaree1,diwaliFestiveSaree2,diwaliFestiveSaree3,diwaliFestiveSaree4],
     category: "Festive Sarees",
     color: "blue",
-    fabric: "Chiffon",
+    fabricCategory: "Chiffon",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -386,7 +386,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -408,7 +408,7 @@ const productList = [
     images:[goldBanarasiSaree1,goldBanarasiSaree2,goldBanarasiSaree3,goldBanarasiSaree4],
     category: "Banarasi Sarees",
     color: "yellow",
-    fabric: "cotton",
+    fabricCategory: "cotton",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -416,7 +416,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 
@@ -438,7 +438,7 @@ const productList = [
     images:[traditionalBanarasiSaree1,traditionalBanarasiSaree2],
     category: "Banarasi Sarees",
     color: "orange",
-    fabric: "cotton",
+    fabricCategory: "cotton",
     description:
       "Elegant Banarasi silk saree perfect for weddings and festivals.",
 
@@ -446,7 +446,7 @@ const productList = [
 
     
 
-    fabric: "Pure cutton",
+    fabric: "Pure Cotton",
 
     blousePiece: "Included",
 

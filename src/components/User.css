@@ -10,7 +10,8 @@
 /* ================= Profile ================= */
 
 .profile-card {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   background: var(--white);
   border-radius: 18px;
   padding: 40px;
