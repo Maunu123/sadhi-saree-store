@@ -332,6 +332,28 @@
   background: var(--accent-color-hover);
   box-shadow: 0 4px 12px rgba(52, 150, 153, 0.2);
 }
+.continue-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background: #ff3f6c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.continue-btn:hover {
+  background: #e6365f;
+  transform: translateY(-2px);
+}
+
+.continue-btn:active {
+  transform: scale(0.98);
+}
 
 @media (max-width: 768px) {
   .checkout-content {

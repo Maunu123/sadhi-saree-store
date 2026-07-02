@@ -1,0 +1,81 @@
+/* ==========================
+   ORDER SUCCESS PAGE
+========================== */
+
+.success-page {
+  min-height: 100vh;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.success-card {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.success-card h1 {
+  color: #ff3f6c;
+  margin-bottom: 15px;
+}
+
+.success-card p {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.success-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  background: #ff3f6c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.success-btn:hover {
+  background: #e6365f;
+  transform: translateY(-2px);
+}
+
+.success-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 600px) {
+  .success-card {
+    padding: 30px 20px;
+  }
+
+  .success-icon {
+    font-size: 60px;
+  }
+
+  .success-card h1 {
+    font-size: 26px;
+  }
+}

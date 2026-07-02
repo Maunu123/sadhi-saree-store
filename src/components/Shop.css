@@ -3,6 +3,8 @@
 ========================= */
 
 .shop-page {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 40px 13px;
   background: var(--light-bg);
   min-height: 100vh;
@@ -51,6 +53,7 @@
 .shop-layout {
   display: flex;
   justify-content: space-between;
+  gap: 25px;
 }
 
 /* =========================
@@ -58,7 +61,8 @@
 ========================= */
 
 .filters {
-  width: 30%;
+  width: 280px;
+  flex-shrink: 0;
   background: white;
   padding: 10px;
   border-radius: 15px;
@@ -182,7 +186,7 @@
 ========================= */
 
 .products {
-  width: 70%;
+  flex-grow: 1;
   padding: 8px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FiHeart, FiShoppingBag } from "react-icons/fi";
 import { FaSearch, FaUser } from "react-icons/fa";
 
@@ -7,13 +7,17 @@ import { CartContext } from "../context/CartContext";
 
 import "./Navbar.css";
 import lotusLogo from "../assets/f.png";
+import { useAuth } from "../context/AuthContext";
 
 const Navbar = () => {
   const { cartCount, wishlistCount } = useContext(CartContext);
-
+  const { currentUser } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [search, setSearch] = useState("");
+
+  const showSearch = location.pathname === "/shop" || location.pathname === "/new-arrival";
 
   const handleSearch = () => {
     if (search.trim() === "") return;
@@ -45,40 +49,35 @@ const Navbar = () => {
 
       {/* Right Side Icons */}
       <div className="nav-icons">
-
         {/* Search */}
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Search sarees..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                handleSearch();
-              }
-            }}
-          />
+        {showSearch && (
+          <div className="search-box">
+            <input
+              type="text"
+              placeholder="Search sarees..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleSearch();
+                }
+              }}
+            />
 
-          <FaSearch
-            className="search-icon"
-            onClick={handleSearch}
-          />
-        </div>
+            <FaSearch className="search-icon" onClick={handleSearch} />
+          </div>
+        )}
 
         {/* User */}
-        <Link to="/user">
+        <Link to={currentUser ? "/user" : "/login"} className="user-icon">
           <FaUser className="icon" />
         </Link>
-
         {/* Wishlist */}
         <Link to="/wishlist" className="wishlist-icon">
           <FiHeart />
 
           {wishlistCount > 0 && (
-            <span className="wishlist-count">
-              {wishlistCount}
-            </span>
+            <span className="wishlist-count">{wishlistCount}</span>
           )}
         </Link>
 
@@ -86,13 +85,8 @@ const Navbar = () => {
         <Link to="/cart" className="cart-icon">
           <FiShoppingBag />
 
-          {cartCount > 0 && (
-            <span className="cart-count">
-              {cartCount}
-            </span>
-          )}
+          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
         </Link>
-
       </div>
     </nav>
   );

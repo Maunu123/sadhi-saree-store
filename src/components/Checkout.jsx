@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { productList } from "../util/helper";
 import { FaCheckCircle, FaMapMarkerAlt } from "react-icons/fa";
@@ -8,10 +7,9 @@ import "./Checkout.css";
 
 function Checkout() {
   const { id } = useParams();
-  const { clearCart } = useContext(CartContext);
   const navigate = useNavigate();
-
-  // Find product if checked out directly
+  const { cart } = useContext(CartContext);
+  
   const product = productList.find((p) => p.id === Number(id));
 
   // Load saved address from localStorage
@@ -20,18 +18,27 @@ function Checkout() {
     return addr ? JSON.parse(addr) : null;
   });
 
-  const userName = localStorage.getItem("name") || "";
+  const currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
+  const userName = localStorage.getItem("name") || currentUser?.name || "";
 
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-  const [pincode, setPincode] = useState("");
+  const [name, setName] = useState(savedAddress?.name || userName || "");
+  const [phone, setPhone] = useState(savedAddress?.phone || currentUser?.phone || "");
+  const [address, setAddress] = useState(savedAddress?.address || "");
+  const [city, setCity] = useState(savedAddress?.city || "");
+  const [state, setState] = useState(savedAddress?.state || "");
+  const [pincode, setPincode] = useState(savedAddress?.pincode || "");
 
-  const saveAddress = () => {
+  const isCartCheckout = id === "cart";
+  
+  const checkoutItems = isCartCheckout
+    ? cart
+    : product
+      ? [{ ...product, quantity: 1 }]
+      : [];
+
+  const handleContinueToPayment = () => {
     if (!name || !phone || !address || !city || !state || !pincode) {
-      alert("Please fill all fields.");
+      alert("Please fill in your shipping details or select a saved address before continuing to payment.");
       return;
     }
 
@@ -45,24 +52,15 @@ function Checkout() {
     };
 
     localStorage.setItem("address", JSON.stringify(userAddress));
-    setSavedAddress(userAddress);
-
-    alert("Address Saved Successfully ✅");
-  };
-
-  const placeOrder = () => {
-    if (!name || !phone || !address || !city || !state || !pincode) {
-      alert("Please fill in your shipping details or select a saved address before placing order.");
-      return;
-    }
-
-    // Clear cart both in context/state and localStorage
-    clearCart();
-
-    alert("Order Placed Successfully 🎉 Thank you for shopping with SADHI!");
-
-    // Navigate to Home as /order-success is not configured
-    navigate("/");
+    
+    // Save the checkout total to localStorage "total" so Payment page reads it correctly
+    const checkoutTotal = isCartCheckout
+      ? checkoutItems.reduce((sum, item) => sum + item.price * item.quantity, 0) - 500 + 20
+      : product ? product.price : 0;
+      
+    localStorage.setItem("total", checkoutTotal);
+    
+    navigate("/payment");
   };
 
   // Helper to check if current inputs match saved address
@@ -104,40 +102,71 @@ function Checkout() {
           </div>
         )}
 
-        {/* Product Order Summary */}
-        {product && (
-          <div
-            style={{
-              display: "flex",
-              gap: "20px",
-              alignItems: "center",
-              background: "var(--light-bg)",
-              padding: "15px 20px",
-              borderRadius: "12px",
-              marginBottom: "30px",
-              border: "1px solid var(--border-color)",
-            }}
-          >
-            <img
-              src={product.banner}
-              alt={product.name}
-              style={{
-                width: "60px",
-                height: "60px",
-                borderRadius: "8px",
-                objectFit: "cover",
-              }}
-            />
-            <div style={{ flex: 1, textAlign: "left" }}>
-              <h4 style={{ margin: "0 0 5px 0", color: "var(--dark-color)", fontSize: "16px" }}>
-                {product.name}
-              </h4>
-              <p style={{ margin: 0, color: "var(--primary-color)", fontWeight: "bold", fontSize: "14px" }}>
-                ₹{product.price}
-              </p>
+        {/* Dynamic Order Summary */}
+        {checkoutItems.length > 0 && (
+          <div className="checkout-summary-section" style={{ marginBottom: "30px" }}>
+            <h3 style={{ borderBottom: "2px solid var(--light-bg)", paddingBottom: "8px", marginBottom: "15px" }}>
+              Order Summary ({checkoutItems.reduce((acc, item) => acc + item.quantity, 0)} Items)
+            </h3>
+            <div className="checkout-summary-list" style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+              {checkoutItems.map((item) => (
+                <div
+                  key={item.id}
+                  style={{
+                    display: "flex",
+                    gap: "20px",
+                    alignItems: "center",
+                    background: "var(--light-bg)",
+                    padding: "15px 20px",
+                    borderRadius: "12px",
+                    border: "1px solid var(--border-color)",
+                  }}
+                >
+                  <img
+                    src={item.banner}
+                    alt={item.name}
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      borderRadius: "8px",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <div style={{ flex: 1, textAlign: "left" }}>
+                    <h4 style={{ margin: "0 0 5px 0", color: "var(--dark-color)", fontSize: "16px" }}>
+                      {item.name}
+                    </h4>
+                    <p style={{ margin: 0, color: "var(--primary-color)", fontWeight: "bold", fontSize: "14px" }}>
+                      ₹{item.price}
+                    </p>
+                  </div>
+                  <div style={{ fontSize: "13px", color: "var(--text-muted)", fontWeight: "600" }}>
+                    Qty: {item.quantity}
+                  </div>
+                </div>
+              ))}
             </div>
-            <div style={{ fontSize: "13px", color: "var(--text-muted)", fontWeight: "600" }}>
-              Qty: 1
+            
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: "15px 20px",
+                background: "var(--success-bg)",
+                border: "1px solid var(--success-border)",
+                borderRadius: "12px",
+                marginTop: "15px",
+                fontWeight: "bold",
+                color: "var(--dark-color)",
+              }}
+            >
+              <span>Total Checkout Amount:</span>
+              <span style={{ color: "var(--primary-color)", fontSize: "18px" }}>
+                ₹{isCartCheckout 
+                  ? checkoutItems.reduce((sum, item) => sum + item.price * item.quantity, 0) - 500 + 20 
+                  : product ? product.price : 0}
+              </span>
             </div>
           </div>
         )}
@@ -230,14 +259,9 @@ function Checkout() {
               />
             </div>
 
-            <div className="checkout-action-buttons">
-              <button type="button" className="save-btn" onClick={saveAddress}>
-                Save Address
-              </button>
-              <button type="button" className="place-order-btn" onClick={placeOrder}>
-                Place Order
-              </button>
-            </div>
+            <button type="button" className="continue-btn" onClick={handleContinueToPayment}>
+              Continue to Payment
+            </button>
           </form>
         </div>
       </div>

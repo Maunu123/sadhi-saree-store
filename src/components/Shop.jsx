@@ -60,7 +60,7 @@ function Shop() {
         category.length === 0 || category.includes(item.category);
 
       const fabricMatch =
-        fabric.length === 0 || fabric.includes(item.fabric);
+        fabric.length === 0 || fabric.includes(item.fabricCategory);
 
       const colorMatch =
         color === "" || color === item.color;
