@@ -72,394 +72,551 @@ const productList = [
     id: 1,
     name: "Red Silk Saree",
     price: 2499,
+    originalPrice: 3499,
+    discount: "28% OFF",
     banner: redSilkSaree1,
     images: [redSilkSaree1, redSilkSaree2],
     category: "Silk Sarees",
     color: "red",
-    fabric: "silk",
+    fabricCategory: "silk",
     tag: "new",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    description: "Elegant Banarasi silk saree perfect for weddings and festivals.",
     brand: "Saree Mahal",
-
-    
-
     fabric: "Pure Silk",
-
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Dry Clean Only",
+    occasion: "Wedding & Festive",
     stock: 12,
-
     rating: 4.5,
-
     reviews: 128,
-
     sizes: ["Free Size"],
-
     features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    offers: [
+      {
+        id: 1,
+        bank: "SBI Credit Card",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,000 on SBI Credit Card transactions.",
+        terms: "Min. purchase: ₹3,000. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "HDFC Bank",
+        type: "Debit Card",
+        text: "Flat ₹500 off on HDFC Bank Debit Card EMI transactions.",
+        terms: "Min. purchase: ₹5,000. T&C Apply.",
+      },
+      {
+        id: 3,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra 5% Instant Discount up to ₹150 on all UPI payments (GPay, PhonePe, Paytm).",
+        terms: "No minimum transaction value. T&C Apply.",
+      }
+    ]
   },
   {
     id: 2,
     name: "Blue Silk Saree",
     price: 2799,
+    originalPrice: 3999,
+    discount: "30% OFF",
     banner: blueSilkSaree1,
-    images: [blueSilkSaree1,blueSilkSaree2,blueSilkSaree3],
+    images: [blueSilkSaree1, blueSilkSaree2, blueSilkSaree3],
     category: "Silk Sarees",
     color: "blue",
-    fabric: "silk",
+    fabricCategory: "silk",
     tag: "new",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    description: "Elegant Banarasi silk saree perfect for weddings and festivals.",
     brand: "Saree Mahal",
-
-    
-
     fabric: "Pure Silk",
-
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Dry Clean Only",
+    occasion: "Wedding & Festive",
     stock: 12,
-
     rating: 4.5,
-
     reviews: 128,
-
     sizes: ["Free Size"],
-
     features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    offers: [
+      {
+        id: 1,
+        bank: "ICICI Bank",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,500 on ICICI Bank Credit Card EMI transactions.",
+        terms: "Min. purchase: ₹4,000. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra 5% Instant Discount up to ₹250 on all UPI payments (GPay, PhonePe, Paytm).",
+        terms: "No minimum transaction value. T&C Apply.",
+      }
+    ]
   },
   {
     id: 3,
     name: "Pink Silk Saree",
     price: 2299,
+    originalPrice: 3299,
+    discount: "30% OFF",
     banner: pinkSilkSaree1,
-    images: [pinkSilkSaree1,pinkSilkSaree2],
+    images: [pinkSilkSaree1, pinkSilkSaree2],
     category: "Silk Sarees",
     color: "pink",
-    fabric: "silk",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "silk",
+    description: "Elegant Banarasi silk saree perfect for weddings and festivals.",
     brand: "Saree Mahal",
-
-    
-
     fabric: "Pure Silk",
-
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Dry Clean Only",
+    occasion: "Festive & Party",
     stock: 12,
-
     rating: 4.5,
-
     reviews: 128,
-
     sizes: ["Free Size"],
-
     features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    offers: [
+      {
+        id: 1,
+        bank: "SBI Credit Card",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,000 on SBI Credit Card transactions.",
+        terms: "Min. purchase: ₹3,000. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra 5% Instant Discount up to ₹250 on all UPI payments (GPay, PhonePe, Paytm).",
+        terms: "No minimum transaction value. T&C Apply.",
+      }
+    ]
   },
   {
     id: 4,
     name: "Classic Cotton Saree",
     price: 1499,
+    originalPrice: 1999,
+    discount: "25% OFF",
     banner: classicCottonSaree1,
-    images:[classicCottonSaree1,classicCottonSaree2,classicCottonSaree3,classicCottonSaree4],
+    images: [classicCottonSaree1, classicCottonSaree2, classicCottonSaree3, classicCottonSaree4],
     category: "Cotton Sarees",
     color: "pink",
-    fabric: "cotton",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "cotton",
+    description: "Elegant, lightweight pure cotton saree with rich textured weave.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
+    fabric: "Pure Cotton",
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Gentle Hand Wash",
+    occasion: "Daily & Casual Wear",
     stock: 12,
-
     rating: 4.5,
-
     reviews: 128,
-
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Handcrafted design", "Lightweight fabric", "Soft breathable texture"],
+    offers: [
+      {
+        id: 1,
+        bank: "Axis Bank",
+        type: "Credit Card",
+        text: "Flat ₹200 off on Axis Bank Credit Card transactions.",
+        terms: "Min. purchase: ₹1,200. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Flat ₹100 Off on any UPI app transaction (GPay, Paytm).",
+        terms: "Min. purchase: ₹1,000. T&C Apply.",
+      }
+    ]
   },
   {
     id: 5,
     name: "Handloom Cotton Saree",
     price: 1799,
+    originalPrice: 2499,
+    discount: "28% OFF",
     banner: handloomCottonSaree1,
-    images:[ handloomCottonSaree1, handloomCottonSaree2, handloomCottonSaree3, handloomCottonSaree4, handloomCottonSaree5],
+    images: [handloomCottonSaree1, handloomCottonSaree2, handloomCottonSaree3, handloomCottonSaree4, handloomCottonSaree5],
     category: "Cotton Sarees",
     color: "orange",
-    fabric: "cotton",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "cotton",
+    description: "Traditional handloom cotton saree featuring elegant borders and soft fabric.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
+    fabric: "Pure Cotton",
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Gentle Hand Wash",
+    occasion: "Office & Festive Wear",
     stock: 12,
-
     rating: 4.5,
-
     reviews: 128,
-
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Authentic Handloom", "Elegant zari border", "Lightweight fabric"],
+    offers: [
+      {
+        id: 1,
+        bank: "HDFC Bank",
+        type: "Debit Card",
+        text: "Flat ₹150 off on HDFC Bank Debit Card transactions.",
+        terms: "Min. purchase: ₹1,500. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra 5% Instant Discount up to ₹150 on all UPI payments.",
+        terms: "No minimum transaction value. T&C Apply.",
+      }
+    ]
   },
   {
     id: 6,
     name: "Royal Wedding Saree",
     price: 4999,
+    originalPrice: 6999,
+    discount: "28% OFF",
     banner: royalWeddingsaree1,
-    images:[royalWeddingsaree1,royalWeddingsaree2,royalWeddingsaree3,royalWeddingsaree4,royalWeddingsaree5],
+    images: [royalWeddingsaree1, royalWeddingsaree2, royalWeddingsaree3, royalWeddingsaree4, royalWeddingsaree5],
     category: "Wedding Sarees",
     color: "yellow",
-    fabric: "Georgette",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "Georgette",
+    description: "Grand royal Georgette saree adorned with heavy gold zari borders.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
-    blousePiece: "Included",
-
+    fabric: "Premium Georgette",
+    blousePiece: "Included (0.8m)",
+    length: "6.0 Meters (with blouse)",
+    washCare: "Dry Clean Only",
+    occasion: "Grand Royal Weddings",
     stock: 12,
-
-    rating: 4.5,
-
-    reviews: 128,
-
+    rating: 4.8,
+    reviews: 240,
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Heavy gold zari work", "Royal bridal pattern", "Superior georgette fabric"],
+    offers: [
+      {
+        id: 1,
+        bank: "SBI Credit Card",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,500 on SBI Credit Card transactions.",
+        terms: "Min. purchase: ₹4,000. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "HDFC Bank",
+        type: "Credit Card",
+        text: "Flat ₹1,000 off on HDFC Credit Card EMI transactions.",
+        terms: "Min. purchase: ₹5,000. T&C Apply.",
+      },
+      {
+        id: 3,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra ₹500 Instant Discount on all UPI payments.",
+        terms: "Min. purchase: ₹4,000. T&C Apply.",
+      }
+    ]
   },
   {
     id: 7,
     name: "Golden Wedding Saree",
     price: 5499,
+    originalPrice: 7499,
+    discount: "26% OFF",
     banner: goldenWeddingSaree1,
-    images:[goldenWeddingSaree1,goldenWeddingSaree2,goldenWeddingSaree3,goldenWeddingSaree4,goldenWeddingSaree5],
+    images: [goldenWeddingSaree1, goldenWeddingSaree2, goldenWeddingSaree3, goldenWeddingSaree4, goldenWeddingSaree5],
     category: "Wedding Sarees",
     color: "yellow",
-    fabric: "Georgette",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "Georgette",
+    description: "Splendid golden designer saree ideal for bridal wear.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
-    blousePiece: "Included",
-
+    fabric: "Premium Georgette",
+    blousePiece: "Included (0.8m)",
+    length: "6.0 Meters (with blouse)",
+    washCare: "Dry Clean Only",
+    occasion: "Bridal & Wedding",
     stock: 12,
-
-    rating: 4.5,
-
-    reviews: 128,
-
+    rating: 4.9,
+    reviews: 180,
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Golden embellishments", "Intricate floral embroidery", "Luxurious fall"],
+    offers: [
+      {
+        id: 1,
+        bank: "SBI Credit Card",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,500 on SBI Credit Card transactions.",
+        terms: "Min. purchase: ₹4,000. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "ICICI Bank",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,500 on ICICI Bank Credit Card EMI transactions.",
+        terms: "Min. purchase: ₹4,000. T&C Apply.",
+      },
+      {
+        id: 3,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra 5% Instant Discount up to ₹250 on all UPI payments.",
+        terms: "T&C Apply.",
+      }
+    ]
   },
   {
     id: 8,
     name: "Designer Party Saree",
     price: 3499,
     banner: partyDesignerSaree1,
-    images:[partyDesignerSaree1,partyDesignerSaree2,partyDesignerSaree3,partyDesignerSaree4,partyDesignerSaree5],
+    images: [partyDesignerSaree1, partyDesignerSaree2, partyDesignerSaree3, partyDesignerSaree4, partyDesignerSaree5],
     category: "Designer Sarees",
     color: "yellow",
-    fabric: "Georgette",
+    fabricCategory: "Georgette",
     description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+      "Stunning designer Georgette saree tailored for modern party wear.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
+    fabric: "Designer Georgette",
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Dry Clean Only",
+    occasion: "Cocktail & Reception Parties",
     stock: 12,
-
     rating: 4.5,
-
     reviews: 128,
-
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Glamorous sequin borders", "Modern drapery", "Lightweight designer feel"],
+    offers: [
+      {
+        id: 1,
+        bank: "Axis Bank",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹500 on Axis Bank Credit Cards.",
+        terms: "Min. purchase: ₹2,500. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra ₹300 Off on GPay/PhonePe payments.",
+        terms: "Min. purchase: ₹3,000. T&C Apply.",
+      }
+    ]
   },
   {
     id: 9,
     name: "Premium Designer Saree",
     price: 3999,
+    originalPrice: 5999,
+    discount: "33% OFF",
     banner: premiumDesignerSaree1,
-    images:[premiumDesignerSaree1,premiumDesignerSaree2,premiumDesignerSaree3,premiumDesignerSaree4],
+    images: [premiumDesignerSaree1, premiumDesignerSaree2, premiumDesignerSaree3, premiumDesignerSaree4],
     category: "Designer Sarees",
     color: "pink",
-    fabric: "Georgette",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "Georgette",
+    description: "Premium handcrafted designer saree featuring a spectacular pink shine.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
+    fabric: "Premium Georgette",
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Dry Clean Only",
+    occasion: "Premium Red Carpet & Party",
     stock: 12,
-
-    rating: 4.5,
-
-    reviews: 128,
-
+    rating: 4.6,
+    reviews: 96,
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Intricate hand embroidery", "Chic sequin pattern", "Ultra-luxurious fall"],
+    offers: [
+      {
+        id: 1,
+        bank: "ICICI Bank",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,000 on ICICI Credit Cards.",
+        terms: "Min. purchase: ₹3,500. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra ₹400 Off via any UPI app payment.",
+        terms: "Min. purchase: ₹3,500. T&C Apply.",
+      }
+    ]
   },
   {
     id: 10,
     name: "Festive Special Saree",
     price: 2999,
+    originalPrice: 3999,
+    discount: "25% OFF",
     banner: specialFestiveSaree1,
-    images:[specialFestiveSaree1,specialFestiveSaree2,specialFestiveSaree3,specialFestiveSaree4],
+    images: [specialFestiveSaree1, specialFestiveSaree2, specialFestiveSaree3, specialFestiveSaree4],
     category: "Festive Sarees",
     color: "green",
-    fabric: "Chiffon",
-     description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "Chiffon",
+    description: "Gorgeous green chiffon saree adorned with rich borders, optimized for festival comfort.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
+    fabric: "Pure Chiffon",
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Gentle Hand Wash",
+    occasion: "Festive & Family Gatherings",
     stock: 12,
-
     rating: 4.5,
-
     reviews: 128,
-
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Golden thread border", "Hand-dyed fabric", "Extremely lightweight"],
+    offers: [
+      {
+        id: 1,
+        bank: "SBI Credit Card",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,000 on SBI Cards.",
+        terms: "Min. purchase: ₹2,500. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra 5% Instant Discount up to ₹250 on all UPI payments.",
+        terms: "T&C Apply.",
+      }
+    ]
   },
   {
     id: 11,
     name: "Diwali Collection Saree",
     price: 3299,
+    originalPrice: 4499,
+    discount: "27% OFF",
     banner: diwaliFestiveSaree1,
-    images:[diwaliFestiveSaree1,diwaliFestiveSaree2,diwaliFestiveSaree3,diwaliFestiveSaree4],
+    images: [diwaliFestiveSaree1, diwaliFestiveSaree2, diwaliFestiveSaree3, diwaliFestiveSaree4],
     category: "Festive Sarees",
     color: "blue",
-    fabric: "Chiffon",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "Chiffon",
+    description: "Exclusive deep blue Chiffon saree designed specifically for sparkling Diwali evenings.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
+    fabric: "Pure Chiffon",
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Gentle Hand Wash",
+    occasion: "Festive Celebrations",
     stock: 12,
-
-    rating: 4.5,
-
-    reviews: 128,
-
+    rating: 4.7,
+    reviews: 154,
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Silver zari threads", "Luminous night texture", "Featherlight comfort"],
+    offers: [
+      {
+        id: 1,
+        bank: "HDFC Bank",
+        type: "Debit Card",
+        text: "Flat ₹300 off on HDFC Bank Debit Cards.",
+        terms: "Min. purchase: ₹3,000. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra ₹200 Off via PhonePe/Paytm.",
+        terms: "Min. purchase: ₹2,500. T&C Apply.",
+      }
+    ]
   },
   {
     id: 12,
     name: "Banarasi Gold Saree",
     price: 5999,
+    originalPrice: 8499,
+    discount: "29% OFF",
     banner: goldBanarasiSaree1,
-    images:[goldBanarasiSaree1,goldBanarasiSaree2,goldBanarasiSaree3,goldBanarasiSaree4],
+    images: [goldBanarasiSaree1, goldBanarasiSaree2, goldBanarasiSaree3, goldBanarasiSaree4],
     category: "Banarasi Sarees",
     color: "yellow",
-    fabric: "cotton",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "cotton",
+    description: "A breathtaking golden Banarasi saree handcrafted by legacy weavers.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
-    blousePiece: "Included",
-
+    fabric: "Premium Banarasi Silk-Cotton",
+    blousePiece: "Included (0.8m)",
+    length: "6.0 Meters (with blouse)",
+    washCare: "Dry Clean Only",
+    occasion: "Weddings & Grand Receptions",
     stock: 12,
-
-    rating: 4.5,
-
-    reviews: 128,
-
+    rating: 4.9,
+    reviews: 210,
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
+    features: ["Heavy golden zari weave", "Legacy craftsmanship", "Stiff royal drape"],
+    offers: [
+      {
+        id: 1,
+        bank: "SBI Credit Card",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,500 on SBI Credit Card transactions.",
+        terms: "Min. purchase: ₹4,000. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "HDFC Bank",
+        type: "Credit Card",
+        text: "Flat ₹1,000 off on HDFC Credit Cards.",
+        terms: "Min. purchase: ₹5,000. T&C Apply.",
+      },
+      {
+        id: 3,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Flat ₹500 Off on any UPI payment.",
+        terms: "Min. purchase: ₹5,000. T&C Apply.",
+      }
+    ]
   },
   {
     id: 13,
     name: "Traditional Banarasi Saree",
     price: 4499,
+    originalPrice: 5999,
+    discount: "25% OFF",
     banner: traditionalBanarasiSaree1,
-    images:[traditionalBanarasiSaree1,traditionalBanarasiSaree2],
+    images: [traditionalBanarasiSaree1, traditionalBanarasiSaree2],
     category: "Banarasi Sarees",
     color: "orange",
-    fabric: "cotton",
-    description:
-      "Elegant Banarasi silk saree perfect for weddings and festivals.",
-
+    fabricCategory: "cotton",
+    description: "Classic Banarasi weaving in deep orange hues reflecting timeless culture.",
     brand: "Saree Mahal",
-
-    
-
-    fabric: "Pure cutton",
-
+    fabric: "Banarasi Cotton-Silk",
     blousePiece: "Included",
-
+    length: "5.5 Meters",
+    washCare: "Dry Clean Only",
+    occasion: "Cultural Festivals & Weddings",
     stock: 12,
-
-    rating: 4.5,
-
-    reviews: 128,
-
+    rating: 4.7,
+    reviews: 140,
     sizes: ["Free Size"],
-
-    features: ["Gold zari work", "Handcrafted design", "Lightweight fabric"],
-  },
+    features: ["Cultural motifs", "Zari border", "Medium stiffness royal fall"],
+    offers: [
+      {
+        id: 1,
+        bank: "ICICI Bank",
+        type: "Credit Card",
+        text: "10% Instant Discount up to ₹1,000 on ICICI Bank Credit Card EMI transactions.",
+        terms: "Min. purchase: ₹4,000. T&C Apply.",
+      },
+      {
+        id: 2,
+        bank: "UPI Offer",
+        type: "UPI",
+        text: "Extra ₹300 Off on all UPI mobile app payments.",
+        terms: "Min. purchase: ₹3,000. T&C Apply.",
+      }
+    ]
+  }
 ];
 
 export { productList };

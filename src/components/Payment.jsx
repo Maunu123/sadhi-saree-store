@@ -1,14 +1,15 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 import "./Payment.css";
 
 const Payment = () => {
   const navigate = useNavigate();
+  const { clearCart } = useContext(CartContext);
 
   const [paymentMethod, setPaymentMethod] = useState("");
 
-  const total=localStorage.getItem("total")||0;
+  const total = localStorage.getItem("total") || 0;
 
   const handlePayment = () => { 
     if (!paymentMethod) { 
@@ -16,28 +17,28 @@ const Payment = () => {
         return; 
     }
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+    const orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-  const newOrder = {
-    id: Date.now(),
-    userId: currentUser.id,
-    items: cart,
-    paymentMethod,
-    total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
-    date: new Date().toLocaleString(),
-    status: "Confirmed",
-  };
+    const newOrder = {
+      id: Date.now(),
+      userId: currentUser?.id,
+      items: cart,
+      paymentMethod,
+      total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+      date: new Date().toLocaleString(),
+      status: "Confirmed",
+    };
 
-  orders.push(newOrder);
+    orders.push(newOrder);
 
-  localStorage.setItem("orders", JSON.stringify(orders));
+    localStorage.setItem("orders", JSON.stringify(orders));
     alert("Payment Successful 🎉");
 
-    localStorage.removeItem("cart"); 
+    clearCart(); 
     navigate("/order-success"); 
-};
+  };
   return (
     <div>
       <div className="payment-page">

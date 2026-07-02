@@ -180,6 +180,14 @@ export const CartProvider = ({ children }) => {
   };
 
   // =======================
+  // Clear Cart
+  // =======================
+  const clearCart = () => {
+    setCart([]);
+    localStorage.removeItem("cart");
+  };
+
+  // =======================
   // Counts
   // =======================
   const cartCount = cart.reduce(
@@ -203,6 +211,7 @@ export const CartProvider = ({ children }) => {
 
         removeFromCart,
         removeFromWishlist,
+        clearCart,
 
         increaseQuantity,
         decreaseQuantity,

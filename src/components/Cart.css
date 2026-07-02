@@ -101,7 +101,7 @@
 }
 
 .remove-btn,
-.buy-btn {
+.wishlist-btn {
   padding: 10px 18px;
   border: none;
   border-radius: 8px;
@@ -119,12 +119,12 @@
   background: #bbb;
 }
 
-.buy-btn {
+.wishlist-btn {
   background: #ff3f6c;
   color: white;
 }
 
-.buy-btn:hover {
+.wishlist-btn:hover {
   background: #e6365f;
 }
 
