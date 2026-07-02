@@ -211,19 +211,20 @@
 }
 
 /* =========================
-   PRODUCT CARD
+  PRODUCT CARD
 ========================= */
-
 .card {
+  position: relative;
   background: white;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .img-box {
@@ -232,7 +233,7 @@
 
 .img-box img {
   width: 100%;
-  height: 208px;
+  height: 208px;   /* Change to 300px or 320px if you want taller sarees */
   object-fit: cover;
   object-position: center top;
 }

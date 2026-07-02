@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Home.css";
 import { FiArrowRight } from "react-icons/fi";
 import { productList } from "../util/helper";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 import saree from "../assets/saree.jpg";
 import saree1 from "../assets/saree1.jpg";
@@ -22,22 +23,33 @@ const categories = [
 
 function Home() {
   const navigate = useNavigate();
+
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  const {
+    wishlist,
+    addToWishlist,
+    removeFromWishlist,
+  } = useContext(CartContext);
+
   const filteredProducts = selectedCategory
-    ? productList.filter((item) => item.category === selectedCategory)
+    ? productList.filter(
+        (item) => item.category === selectedCategory
+      )
     : productList;
 
   return (
     <main className="home">
+
       {/* Shop By Category */}
+
       <section className="category-section">
+
         <div className="section-header">
           <h2>Shop by Category</h2>
 
           <a href="#" className="view-all">
-            view all
-            <FiArrowRight />
+            View All <FiArrowRight />
           </a>
         </div>
 
@@ -53,39 +65,88 @@ function Home() {
             </div>
           ))}
         </div>
+
       </section>
 
       {/* New Arrivals */}
+
       <section className="arrival-section">
+
         <div className="section-header">
-          <h2>{selectedCategory ? `${selectedCategory}` : "New Arrivals"}</h2>
+          <h2>
+            {selectedCategory
+              ? selectedCategory
+              : "New Arrivals"}
+          </h2>
+
           <a href="#" className="view-all">
-            view all
-            <FiArrowRight />
+            View All <FiArrowRight />
           </a>
         </div>
 
         <div className="arrival-grid">
+
           {filteredProducts.map((item) => (
+
             <div
               className="arrival-card"
               key={item.id}
-              onClick={() => navigate(`/shop-details/${item.id}`)}
+              onClick={() =>
+                navigate(`/shop-details/${item.id}`)
+              }
             >
-              {/* <span className="badge">{item.tag}</span> */}
-              {item.tag ? <span className="badge">{item.tag}</span> : <></>}
-              <button className="heart">♡</button>
 
-              <img src={item?.banner} alt={item.name} />
+              {item.tag && (
+                <span className="badge">
+                  {item.tag}
+                </span>
+              )}
+
+              {/* Wishlist */}
+
+              <button
+                className="heart"
+                onClick={(e) => {
+                  e.stopPropagation();
+
+                  const exists = wishlist.some(
+                    (wish) => wish.id === item.id
+                  );
+
+                  if (exists) {
+                    removeFromWishlist(item.id);
+                  } else {
+                    addToWishlist(item);
+                  }
+                }}
+              >
+                {wishlist.some(
+                  (wish) => wish.id === item.id
+                )
+                  ? "❤️"
+                  : "🤍"}
+              </button>
+
+              <img
+                src={item.banner}
+                alt={item.name}
+              />
 
               <div className="product-info">
                 <h4>{item.name}</h4>
-                <p className="price">{item.price}</p>
+                <p className="price">
+                  ₹{item.price}
+                </p>
               </div>
+
             </div>
+
           ))}
+
         </div>
+
       </section>
+
     </main>
   );
 }

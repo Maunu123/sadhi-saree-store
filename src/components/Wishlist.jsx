@@ -10,6 +10,8 @@ const {
     moveWishlistToCart,
   } = useContext(CartContext);
 
+  
+
   return (
     <div className="wishlist-page">
       <h1>My Wishlist</h1>

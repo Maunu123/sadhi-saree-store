@@ -1,10 +1,14 @@
 import "./Shop.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { productList } from "../util/helper.js";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 function Shop() {
   const location = useLocation();
+  const { wishlist, addToWishlist, removeFromWishlist } =
+    useContext(CartContext);
 
   const searchParams = new URLSearchParams(location.search);
   const search = searchParams.get("search") || "";
@@ -22,7 +26,7 @@ function Shop() {
     setCategory((prev) =>
       prev.includes(value)
         ? prev.filter((item) => item !== value)
-        : [...prev, value]
+        : [...prev, value],
     );
   }
 
@@ -30,7 +34,7 @@ function Shop() {
     setFabric((prev) =>
       prev.includes(value)
         ? prev.filter((item) => item !== value)
-        : [...prev, value]
+        : [...prev, value],
     );
   }
 
@@ -62,18 +66,14 @@ function Shop() {
       const fabricMatch =
         fabric.length === 0 || fabric.includes(item.fabricCategory);
 
-      const colorMatch =
-        color === "" || color === item.color;
+      const colorMatch = color === "" || color === item.color;
 
-      const priceMatch =
-        price === 0 || item.price <= price;
+      const priceMatch = price === 0 || item.price <= price;
 
-      const newMatch =
-        sortBy !== "new" || item.tag === "new";
+      const newMatch = sortBy !== "new" || item.tag === "new";
 
       const searchMatch =
-        search === "" ||
-        item.name.toLowerCase().includes(search.toLowerCase());
+        search === "" || item.name.toLowerCase().includes(search.toLowerCase());
 
       return (
         categoryMatch &&
@@ -96,14 +96,12 @@ function Shop() {
       return 0;
     });
 
-  const totalPages = Math.ceil(
-    filteredProducts.length / productsPerPage
-  );
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const startIndex = (currentPage - 1) * productsPerPage;
   const currentProducts = filteredProducts.slice(
     startIndex,
-    startIndex + productsPerPage
+    startIndex + productsPerPage,
   );
 
   return (
@@ -174,12 +172,17 @@ function Shop() {
 
           <div className="colors">
             <span
-              style={{ background: "red" }}
-              onClick={() => handleColor("red")}
-            ></span>
-
+  style={{
+    background: "red",
+    boxShadow: "0 4px 10px rgba(211, 14, 7, 0.3)"
+  }}
+  onClick={() => handleColor("red")}
+></span>
+            
             <span
-              style={{ background: "blue" }}
+              style={{ background: "blue",
+              boxShadow: "0 4px 10px rgba(27, 7, 211, 0.3)"
+              }}
               onClick={() => handleColor("blue")}
             ></span>
 
@@ -235,23 +238,26 @@ function Shop() {
             >
               <div className="card">
                 <div className="img-box">
-                  {p.tag && (
-                    <span className="badge">
-                      {p.tag}
-                    </span>
-                  )}
+                  {p.tag && <span className="badge">{p.tag}</span>}
 
                   <button
                     className="heart"
-                    onClick={(e) => e.preventDefault()}
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      const exists = wishlist.some((item) => item.id === p.id);
+
+                      if (exists) {
+                        removeFromWishlist(p.id);
+                      } else {
+                        addToWishlist(p);
+                      }
+                    }}
                   >
-                    ♡
+                    {wishlist.some((item) => item.id === p.id) ? "❤️" : "🤍"}
                   </button>
 
-                  <img
-                    src={p.banner}
-                    alt={p.name}
-                  />
+                  <img src={p.banner} alt={p.name} />
                 </div>
 
                 <h3>{p.name}</h3>
@@ -266,9 +272,7 @@ function Shop() {
           <div className="pagination">
             <button
               disabled={currentPage === 1}
-              onClick={() =>
-                setCurrentPage(currentPage - 1)
-              }
+              onClick={() => setCurrentPage(currentPage - 1)}
             >
               &lt;
             </button>
@@ -276,14 +280,8 @@ function Shop() {
             {[...Array(totalPages)].map((_, index) => (
               <button
                 key={index}
-                className={
-                  currentPage === index + 1
-                    ? "active"
-                    : ""
-                }
-                onClick={() =>
-                  setCurrentPage(index + 1)
-                }
+                className={currentPage === index + 1 ? "active" : ""}
+                onClick={() => setCurrentPage(index + 1)}
               >
                 {index + 1}
               </button>
@@ -291,9 +289,7 @@ function Shop() {
 
             <button
               disabled={currentPage === totalPages}
-              onClick={() =>
-                setCurrentPage(currentPage + 1)
-              }
+              onClick={() => setCurrentPage(currentPage + 1)}
             >
               &gt;
             </button>
