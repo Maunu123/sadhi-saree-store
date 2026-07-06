@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   FaUserCircle,
@@ -96,34 +96,41 @@ function User() {
         </div>
 
         {isEditing && (
-          <div className="edit-profile">
-            <h3>Edit Profile</h3>
+          <div className="modal-overlay" onClick={() => setIsEditing(false)}>
+            <div className="edit-profile" onClick={(e) => e.stopPropagation()}>
+              <div className="header">
+                <h3>Edit Profile</h3>
+              </div>
+              <div className="edit-wrapper">
+                <label className="form-label">Full Name</label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
 
-            <input
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+                <label className="form-label">Email Address</label>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
 
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+                <label className="form-label">Phone Number</label>
+                <input
+                  type="text"
+                  placeholder="Phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
 
-            <input
-              type="text"
-              placeholder="Phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-
-            <div className="edit-buttons">
-              <button onClick={saveProfile}>Save</button>
-
-              <button onClick={() => setIsEditing(false)}>Cancel</button>
+                <div className="edit-buttons">
+                  <button onClick={saveProfile}>Save</button>
+                  <button onClick={() => setIsEditing(false)}>Cancel</button>
+                </div>
+              </div>
             </div>
           </div>
         )}
