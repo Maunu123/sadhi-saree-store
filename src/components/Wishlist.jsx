@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import {useContext} from "react";
 import './Wishlist.css';
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
@@ -33,23 +33,25 @@ const {
 
               <p>₹{item.price}</p>
 
-              <button
-                className="cart-btn"
-                onClick={() =>
-                  moveWishlistToCart(item)
-                }
-              >
-                Add To Cart
-              </button>
+              <div className="wishlist-actions">
+                <button
+                  className="cart-btn"
+                  onClick={() =>
+                    moveWishlistToCart(item)
+                  }
+                >
+                  Add To Cart
+                </button>
 
-              <button
-                className="remove-btn"
-                onClick={() =>
-                  removeFromWishlist(item.id)
-                }
-              >
-                Remove
-              </button>
+                <button
+                  className="remove-btn"
+                  onClick={() =>
+                    removeFromWishlist(item.id)
+                  }
+                >
+                  Remove
+                </button>
+              </div>
             </div>
           </div>
         ))

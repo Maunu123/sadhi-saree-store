@@ -79,6 +79,7 @@ function Login() {
           <form onSubmit={handleLogin}>
 
             <input
+              className="form-input"
               type="email"
               placeholder="Email"
               value={loginEmail}
@@ -87,6 +88,7 @@ function Login() {
             />
 
             <input
+              className="form-input"
               type="password"
               placeholder="Password"
               value={loginPassword}
@@ -103,6 +105,7 @@ function Login() {
           <form onSubmit={handleSignup}>
 
             <input
+              className="form-input"
               type="text"
               placeholder="Full Name"
               value={name}
@@ -111,6 +114,7 @@ function Login() {
             />
 
             <input
+              className="form-input"
               type="email"
               placeholder="Email"
               value={email}
@@ -119,6 +123,7 @@ function Login() {
             />
 
             <input
+              className="form-input"
               type="text"
               placeholder="Phone Number"
               value={phone}
@@ -127,6 +132,7 @@ function Login() {
             />
 
             <input
+              className="form-input"
               type="password"
               placeholder="Password"
               value={password}

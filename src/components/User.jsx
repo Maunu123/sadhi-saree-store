@@ -104,6 +104,7 @@ function User() {
               <div className="edit-wrapper">
                 <label className="form-label">Full Name</label>
                 <input
+                  className="form-input"
                   type="text"
                   placeholder="Name"
                   value={name}
@@ -112,6 +113,7 @@ function User() {
 
                 <label className="form-label">Email Address</label>
                 <input
+                  className="form-input"
                   type="email"
                   placeholder="Email"
                   value={email}
@@ -120,6 +122,7 @@ function User() {
 
                 <label className="form-label">Phone Number</label>
                 <input
+                  className="form-input"
                   type="text"
                   placeholder="Phone"
                   value={phone}

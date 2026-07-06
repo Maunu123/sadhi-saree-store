@@ -201,6 +201,7 @@ function Checkout() {
             <div className="checkout-input-field">
               <label>Full Name</label>
               <input
+                className="form-input"
                 type="text"
                 placeholder="Full Name"
                 value={name}
@@ -211,6 +212,7 @@ function Checkout() {
             <div className="checkout-input-field">
               <label>Phone Number</label>
               <input
+                className="form-input"
                 type="text"
                 placeholder="Phone Number"
                 value={phone}
@@ -221,6 +223,7 @@ function Checkout() {
             <div className="checkout-input-field">
               <label>Address</label>
               <textarea
+                className="form-input"
                 placeholder="Address"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
@@ -231,6 +234,7 @@ function Checkout() {
               <div className="checkout-input-field">
                 <label>City</label>
                 <input
+                  className="form-input"
                   type="text"
                   placeholder="City"
                   value={city}
@@ -241,6 +245,7 @@ function Checkout() {
               <div className="checkout-input-field">
                 <label>State</label>
                 <input
+                  className="form-input"
                   type="text"
                   placeholder="State"
                   value={state}
@@ -252,6 +257,7 @@ function Checkout() {
             <div className="checkout-input-field">
               <label>Pincode</label>
               <input
+                className="form-input"
                 type="text"
                 placeholder="Pincode"
                 value={pincode}

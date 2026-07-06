@@ -32,6 +32,11 @@
   --medium-gray-text: #555555;
   --medium-dark-text: #444444;
   --dashed-border-color: #cccccc;
+
+  /* Premium Unified Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.12);
 }
 
 /* Apply the clean, high-readability Flipkart/Amazon-style font globally */
@@ -72,4 +77,45 @@ body {
 img{
   object-fit: cover;
   object-position: center top;
+}
+
+/* Global Transition Utility */
+a, button, .user-card, .product-card, .cart-item {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium Form Input Utility - Class & Tag selectors */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+textarea,
+select,
+.form-input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  background: var(--white);
+  color: var(--dark-color);
+  box-sizing: border-box;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus,
+.form-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(255, 63, 108, 0.15);
 }

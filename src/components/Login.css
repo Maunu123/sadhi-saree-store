@@ -21,7 +21,7 @@
   background: #fff;
   padding: 35px;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-md);
 }
 
 .login-card h2 {
@@ -40,20 +40,8 @@
   flex-direction: column;
 }
 
-.login-card input {
-  width: 100%;
-  padding: 14px;
+.login-card .form-input {
   margin-bottom: 18px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 15px;
-  outline: none;
-  transition: 0.3s;
-}
-
-.login-card input:focus {
-  border-color: #ff3f6c;
-  box-shadow: 0 0 8px rgba(255,63,108,0.2);
 }
 
 /* ===========================
@@ -127,7 +115,7 @@
     font-size: 22px;
   }
 
-  .login-card input,
+  .login-card .form-input,
   .login-card button {
     padding: 12px;
     font-size: 14px;
