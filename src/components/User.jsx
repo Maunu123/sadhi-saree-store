@@ -59,37 +59,37 @@ function User() {
         <p>Welcome to SADHI Saree Store</p>
 
         <div className="dashboard">
-          <Link to="/orders" className="card">
+          <Link to="/orders" className="user-card">
             <FaShoppingBag />
             <span>My Orders</span>
           </Link>
 
-          <Link to="/wishlist" className="card">
+          <Link to="/wishlist" className="user-card">
             <FaHeart />
             <span>Wishlist</span>
           </Link>
 
-          <Link to="/cart" className="card">
+          <Link to="/cart" className="user-card">
             <FaShoppingCart />
             <span>My Cart</span>
           </Link>
 
-          <div className="card">
+          <Link to="/save-address" className="user-card">
             <FaMapMarkerAlt />
 
             <span>
               {address.city
                 ? `${address.city}, ${address.state}`
-                : "No Address"}
+                : "Manage Addresses"}
             </span>
-          </div>
+          </Link>
 
-          <div className="card" onClick={() => setIsEditing(true)}>
+          <div className="user-card" onClick={() => setIsEditing(true)}>
             <FaEdit />
             <span>Edit Profile</span>
           </div>
 
-          <div className="card logout" onClick={handleLogout}>
+          <div className="user-card logout" onClick={handleLogout}>
             <FaSignOutAlt />
             <span>Logout</span>
           </div>

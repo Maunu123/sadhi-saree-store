@@ -69,3 +69,7 @@ body {
   background-color: #fcfcfc;
   color: var(--dark-color);
 }
+img{
+  object-fit: cover;
+  object-position: center top;
+}
