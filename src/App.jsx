@@ -16,6 +16,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Payment from "./components/Payment";
 import OrderSuccess from "./components/OrderSuccess";
 import MyOrders from "./components/MyOrders";
+import Address from "./components/Address";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -75,6 +76,8 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/order-success" element={<OrderSuccess />} />
         <Route path="/orders" element={<MyOrders />} />
+        <Route path="/address" element={<Address/>} />
+        
       </Routes>
 
       <Footer />

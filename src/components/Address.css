@@ -1,0 +1,224 @@
+/* ==========================
+   ADDRESS PAGE
+========================== */
+
+.address-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.address-page h2 {
+  font-size: 32px;
+  color: #282c3f;
+  margin-bottom: 30px;
+}
+
+/* ==========================
+   ADD ADDRESS CARD
+========================== */
+
+.add-address-card {
+  border: 2px dashed #d4d5d9;
+  border-radius: 12px;
+  background: #fff;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: .3s;
+  margin-bottom: 30px;
+}
+
+.add-address-card:hover {
+  border-color: #ff3f6c;
+  background: #fff5f8;
+}
+
+.plus-icon {
+  font-size: 24px;
+  color: #ff3f6c;
+}
+
+.add-address-card span {
+  font-size: 17px;
+  font-weight: 600;
+  color: #ff3f6c;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.address-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,.08);
+  margin-bottom: 35px;
+}
+
+.address-form h3 {
+  margin-bottom: 20px;
+  color: #282c3f;
+}
+
+.address-form input,
+.address-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.address-form input:focus,
+.address-form textarea:focus {
+  border-color: #ff3f6c;
+}
+
+.address-form textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* ==========================
+   ADDRESS TYPE
+========================== */
+
+.address-type {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.address-type button {
+  padding: 10px 25px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  background: white;
+  cursor: pointer;
+  transition: .3s;
+  font-weight: 600;
+}
+
+.address-type button:hover {
+  border-color: #ff3f6c;
+}
+
+.address-type .active {
+  background: #ff3f6c;
+  color: white;
+  border-color: #ff3f6c;
+}
+
+/* ==========================
+   SAVE BUTTON
+========================== */
+
+.save-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #ff3f6c;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.save-btn:hover {
+  background: #e73360;
+}
+
+/* ==========================
+   SAVED ADDRESS CARD
+========================== */
+
+.saved-address {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.saved-address:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.saved-address h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #282c3f;
+  margin-bottom: 12px;
+}
+
+.saved-address h4 {
+  margin-bottom: 8px;
+}
+
+.saved-address p {
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.address-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.delete-btn {
+  border: none;
+  background: #ff3f6c;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  transition: .3s;
+}
+
+.delete-btn:hover {
+  background: #e73360;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.address-page{
+padding:15px;
+}
+
+.address-type{
+flex-direction:column;
+}
+
+.address-type button{
+width:100%;
+}
+
+.saved-address{
+padding:18px;
+}
+
+}

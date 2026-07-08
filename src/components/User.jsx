@@ -74,7 +74,7 @@ function User() {
             <span>My Cart</span>
           </Link>
 
-          <Link to="/save-address" className="user-card">
+          <Link to="/address" className="user-card">
             <FaMapMarkerAlt />
 
             <span>
