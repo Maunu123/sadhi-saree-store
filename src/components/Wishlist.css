@@ -80,3 +80,31 @@
   background: #e8e8e8;
   transform: translateY(-2px);
 }
+
+@media (max-width: 640px) {
+  .wishlist-page {
+    width: 94%;
+    margin: 24px auto;
+  }
+
+  .wishlist-item {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .wishlist-item img {
+    width: 100%;
+    height: min(360px, 110vw);
+  }
+
+  .wishlist-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .wishlist-actions button {
+    max-width: none;
+    min-width: 140px;
+  }
+}

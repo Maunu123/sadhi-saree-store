@@ -21,7 +21,7 @@ const {
       ) : (
         wishlist.map((item) => (
           <div key={item.id} className="wishlist-item">
-            <Link to={`/details/${item.id}`}>
+            <Link to={`/shop-details/${item.id}`}>
               <img
                 src={item.banner}
                 alt={item.name}

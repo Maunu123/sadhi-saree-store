@@ -18,14 +18,17 @@ import Payment from "./components/Payment";
 import OrderSuccess from "./components/OrderSuccess";
 import MyOrders from "./components/MyOrders";
 import Address from "./components/Address";
-
+import Breadcrumb from "./components/Breadcrumb";
+import Faq from "./components/Faq";
+import ReturnPolicy from "./components/ReturnPolicy";
+import ShippingPolicy from "./components/ShippingPolicy";
 function App() {
   const [cartCount, setCartCount] = useState(0);
   return (
     <BrowserRouter>
       <AnnouncementBar />
       <Navbar />
-
+      <Breadcrumb />
       <Routes>
         <Route
           path="/"
@@ -39,8 +42,7 @@ function App() {
 
         <Route path="/shop" element={<Shop />} />
         <Route path="/shop-details/:id" element={<ShopDetails />} />
-        
-        
+
         <Route path="/new-arrival" element={<NewArrival />} />
         <Route path="/login" element={<Login />} />
         <Route
@@ -78,8 +80,11 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/order-success" element={<OrderSuccess />} />
         <Route path="/orders" element={<MyOrders />} />
-        <Route path="/address" element={<Address/>} />
-        
+        <Route path="/address" element={<Address />} />
+
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/shipping-policy" element={<ShippingPolicy />} />
+        <Route path="/return-policy" element={<ReturnPolicy />} />
       </Routes>
 
       <Footer />
