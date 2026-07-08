@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AnnouncementBar from "./components/AnnouncementBar";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Home from "./components/Home";
@@ -22,6 +23,7 @@ function App() {
   const [cartCount, setCartCount] = useState(0);
   return (
     <BrowserRouter>
+      <AnnouncementBar />
       <Navbar />
 
       <Routes>
