@@ -13,13 +13,11 @@ import classicCottonSaree2 from "../assets/cotton_saree/cotton/2.jpeg";
 import classicCottonSaree3 from "../assets/cotton_saree/cotton/3.jpeg";
 import classicCottonSaree4 from "../assets/cotton_saree/cotton/4.jpeg";
 
-
 import handloomCottonSaree1 from "../assets/cotton_saree/handloom/1.jpeg";
 import handloomCottonSaree2 from "../assets/cotton_saree/handloom/2.jpeg";
 import handloomCottonSaree3 from "../assets/cotton_saree/handloom/3.jpeg";
 import handloomCottonSaree4 from "../assets/cotton_saree/handloom/4.jpeg";
 import handloomCottonSaree5 from "../assets/cotton_saree/handloom/5.jpeg";
-
 
 import royalWeddingsaree1 from "../assets/wedding_saree/royal/1.jpeg";
 import royalWeddingsaree2 from "../assets/wedding_saree/royal/2.jpeg";
@@ -27,20 +25,17 @@ import royalWeddingsaree3 from "../assets/wedding_saree/royal/3.jpeg";
 import royalWeddingsaree4 from "../assets/wedding_saree/royal/4.jpeg";
 import royalWeddingsaree5 from "../assets/wedding_saree/royal/5.jpeg";
 
-
 import goldenWeddingSaree1 from "../assets/wedding_saree/wedding/1.jpeg";
 import goldenWeddingSaree2 from "../assets/wedding_saree/wedding/2.jpeg";
 import goldenWeddingSaree3 from "../assets/wedding_saree/wedding/3.jpeg";
 import goldenWeddingSaree4 from "../assets/wedding_saree/wedding/4.jpeg";
 import goldenWeddingSaree5 from "../assets/wedding_saree/wedding/5.jpeg";
 
-
 import partyDesignerSaree1 from "../assets/designer_saree/party/1.jpeg";
 import partyDesignerSaree2 from "../assets/designer_saree/party/2.jpeg";
 import partyDesignerSaree3 from "../assets/designer_saree/party/3.jpeg";
 import partyDesignerSaree4 from "../assets/designer_saree/party/4.jpeg";
 import partyDesignerSaree5 from "../assets/designer_saree/party/5.jpeg";
-
 
 import premiumDesignerSaree1 from "../assets/designer_saree/premium/1.jpeg";
 import premiumDesignerSaree2 from "../assets/designer_saree/premium/2.jpeg";
@@ -52,7 +47,6 @@ import specialFestiveSaree2 from "../assets/festive_saree/festive/2.jpeg";
 import specialFestiveSaree3 from "../assets/festive_saree/festive/3.jpeg";
 import specialFestiveSaree4 from "../assets/festive_saree/festive/4.jpeg";
 
-
 import diwaliFestiveSaree1 from "../assets/festive_saree/diwali/1.jpeg";
 import diwaliFestiveSaree2 from "../assets/festive_saree/diwali/2.jpeg";
 import diwaliFestiveSaree3 from "../assets/festive_saree/diwali/3.jpeg";
@@ -62,7 +56,6 @@ import goldBanarasiSaree1 from "../assets/banarasi_saree/gold/1.jpeg";
 import goldBanarasiSaree2 from "../assets/banarasi_saree/gold/2.jpeg";
 import goldBanarasiSaree3 from "../assets/banarasi_saree/gold/3.jpeg";
 import goldBanarasiSaree4 from "../assets/banarasi_saree/gold/4.jpeg";
-
 
 import traditionalBanarasiSaree1 from "../assets/banarasi_saree/traditional/1.jpeg";
 import traditionalBanarasiSaree2 from "../assets/banarasi_saree/traditional/2.jpeg";
@@ -80,7 +73,8 @@ const productList = [
     color: "red",
     fabricCategory: "silk",
     tag: "new",
-    description: "Elegant Banarasi silk saree perfect for weddings and festivals.",
+    description:
+      "Elegant Banarasi silk saree perfect for weddings and festivals.",
     brand: "Saree Mahal",
     fabric: "Pure Silk",
     blousePiece: "Included",
@@ -113,8 +107,8 @@ const productList = [
         type: "UPI",
         text: "Extra 5% Instant Discount up to ₹150 on all UPI payments (GPay, PhonePe, Paytm).",
         terms: "No minimum transaction value. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 2,
@@ -128,7 +122,8 @@ const productList = [
     color: "blue",
     fabricCategory: "silk",
     tag: "new",
-    description: "Elegant Banarasi silk saree perfect for weddings and festivals.",
+    description:
+      "Elegant Banarasi silk saree perfect for weddings and festivals.",
     brand: "Saree Mahal",
     fabric: "Pure Silk",
     blousePiece: "Included",
@@ -154,8 +149,8 @@ const productList = [
         type: "UPI",
         text: "Extra 5% Instant Discount up to ₹250 on all UPI payments (GPay, PhonePe, Paytm).",
         terms: "No minimum transaction value. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 3,
@@ -168,7 +163,9 @@ const productList = [
     category: "Silk Sarees",
     color: "pink",
     fabricCategory: "silk",
-    description: "Elegant Banarasi silk saree perfect for weddings and festivals.",
+    tag: "new",
+    description:
+      "Elegant Banarasi silk saree perfect for weddings and festivals.",
     brand: "Saree Mahal",
     fabric: "Pure Silk",
     blousePiece: "Included",
@@ -194,8 +191,8 @@ const productList = [
         type: "UPI",
         text: "Extra 5% Instant Discount up to ₹250 on all UPI payments (GPay, PhonePe, Paytm).",
         terms: "No minimum transaction value. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 4,
@@ -204,11 +201,17 @@ const productList = [
     originalPrice: 1999,
     discount: "25% OFF",
     banner: classicCottonSaree1,
-    images: [classicCottonSaree1, classicCottonSaree2, classicCottonSaree3, classicCottonSaree4],
+    images: [
+      classicCottonSaree1,
+      classicCottonSaree2,
+      classicCottonSaree3,
+      classicCottonSaree4,
+    ],
     category: "Cotton Sarees",
-    color: "pink",
+    color: "purple",
     fabricCategory: "cotton",
-    description: "Elegant, lightweight pure cotton saree with rich textured weave.",
+    description:
+      "Elegant, lightweight pure cotton saree with rich textured weave.",
     brand: "Saree Mahal",
     fabric: "Pure Cotton",
     blousePiece: "Included",
@@ -219,7 +222,11 @@ const productList = [
     rating: 4.5,
     reviews: 128,
     sizes: ["Free Size"],
-    features: ["Handcrafted design", "Lightweight fabric", "Soft breathable texture"],
+    features: [
+      "Handcrafted design",
+      "Lightweight fabric",
+      "Soft breathable texture",
+    ],
     offers: [
       {
         id: 1,
@@ -234,8 +241,8 @@ const productList = [
         type: "UPI",
         text: "Flat ₹100 Off on any UPI app transaction (GPay, Paytm).",
         terms: "Min. purchase: ₹1,000. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 5,
@@ -244,11 +251,18 @@ const productList = [
     originalPrice: 2499,
     discount: "28% OFF",
     banner: handloomCottonSaree1,
-    images: [handloomCottonSaree1, handloomCottonSaree2, handloomCottonSaree3, handloomCottonSaree4, handloomCottonSaree5],
+    images: [
+      handloomCottonSaree1,
+      handloomCottonSaree2,
+      handloomCottonSaree3,
+      handloomCottonSaree4,
+      handloomCottonSaree5,
+    ],
     category: "Cotton Sarees",
-    color: "orange",
+    color: "pink",
     fabricCategory: "cotton",
-    description: "Traditional handloom cotton saree featuring elegant borders and soft fabric.",
+    description:
+      "Traditional handloom cotton saree featuring elegant borders and soft fabric.",
     brand: "Saree Mahal",
     fabric: "Pure Cotton",
     blousePiece: "Included",
@@ -259,7 +273,11 @@ const productList = [
     rating: 4.5,
     reviews: 128,
     sizes: ["Free Size"],
-    features: ["Authentic Handloom", "Elegant zari border", "Lightweight fabric"],
+    features: [
+      "Authentic Handloom",
+      "Elegant zari border",
+      "Lightweight fabric",
+    ],
     offers: [
       {
         id: 1,
@@ -274,8 +292,8 @@ const productList = [
         type: "UPI",
         text: "Extra 5% Instant Discount up to ₹150 on all UPI payments.",
         terms: "No minimum transaction value. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 6,
@@ -284,11 +302,19 @@ const productList = [
     originalPrice: 6999,
     discount: "28% OFF",
     banner: royalWeddingsaree1,
-    images: [royalWeddingsaree1, royalWeddingsaree2, royalWeddingsaree3, royalWeddingsaree4, royalWeddingsaree5],
+    images: [
+      royalWeddingsaree1,
+      royalWeddingsaree2,
+      royalWeddingsaree3,
+      royalWeddingsaree4,
+      royalWeddingsaree5,
+    ],
     category: "Wedding Sarees",
-    color: "yellow",
+    color: "blue",
     fabricCategory: "Georgette",
-    description: "Grand royal Georgette saree adorned with heavy gold zari borders.",
+    tag: "new",
+    description:
+      "Grand royal Georgette saree adorned with heavy gold zari borders.",
     brand: "Saree Mahal",
     fabric: "Premium Georgette",
     blousePiece: "Included (0.8m)",
@@ -299,7 +325,11 @@ const productList = [
     rating: 4.8,
     reviews: 240,
     sizes: ["Free Size"],
-    features: ["Heavy gold zari work", "Royal bridal pattern", "Superior georgette fabric"],
+    features: [
+      "Heavy gold zari work",
+      "Royal bridal pattern",
+      "Superior georgette fabric",
+    ],
     offers: [
       {
         id: 1,
@@ -321,8 +351,8 @@ const productList = [
         type: "UPI",
         text: "Extra ₹500 Instant Discount on all UPI payments.",
         terms: "Min. purchase: ₹4,000. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 7,
@@ -331,7 +361,13 @@ const productList = [
     originalPrice: 7499,
     discount: "26% OFF",
     banner: goldenWeddingSaree1,
-    images: [goldenWeddingSaree1, goldenWeddingSaree2, goldenWeddingSaree3, goldenWeddingSaree4, goldenWeddingSaree5],
+    images: [
+      goldenWeddingSaree1,
+      goldenWeddingSaree2,
+      goldenWeddingSaree3,
+      goldenWeddingSaree4,
+      goldenWeddingSaree5,
+    ],
     category: "Wedding Sarees",
     color: "yellow",
     fabricCategory: "Georgette",
@@ -346,7 +382,11 @@ const productList = [
     rating: 4.9,
     reviews: 180,
     sizes: ["Free Size"],
-    features: ["Golden embellishments", "Intricate floral embroidery", "Luxurious fall"],
+    features: [
+      "Golden embellishments",
+      "Intricate floral embroidery",
+      "Luxurious fall",
+    ],
     offers: [
       {
         id: 1,
@@ -368,18 +408,25 @@ const productList = [
         type: "UPI",
         text: "Extra 5% Instant Discount up to ₹250 on all UPI payments.",
         terms: "T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 8,
     name: "Designer Party Saree",
     price: 3499,
     banner: partyDesignerSaree1,
-    images: [partyDesignerSaree1, partyDesignerSaree2, partyDesignerSaree3, partyDesignerSaree4, partyDesignerSaree5],
+    images: [
+      partyDesignerSaree1,
+      partyDesignerSaree2,
+      partyDesignerSaree3,
+      partyDesignerSaree4,
+      partyDesignerSaree5,
+    ],
     category: "Designer Sarees",
     color: "yellow",
     fabricCategory: "Georgette",
+    tag: "new",
     description:
       "Stunning designer Georgette saree tailored for modern party wear.",
     brand: "Saree Mahal",
@@ -392,7 +439,11 @@ const productList = [
     rating: 4.5,
     reviews: 128,
     sizes: ["Free Size"],
-    features: ["Glamorous sequin borders", "Modern drapery", "Lightweight designer feel"],
+    features: [
+      "Glamorous sequin borders",
+      "Modern drapery",
+      "Lightweight designer feel",
+    ],
     offers: [
       {
         id: 1,
@@ -407,8 +458,8 @@ const productList = [
         type: "UPI",
         text: "Extra ₹300 Off on GPay/PhonePe payments.",
         terms: "Min. purchase: ₹3,000. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 9,
@@ -417,11 +468,17 @@ const productList = [
     originalPrice: 5999,
     discount: "33% OFF",
     banner: premiumDesignerSaree1,
-    images: [premiumDesignerSaree1, premiumDesignerSaree2, premiumDesignerSaree3, premiumDesignerSaree4],
+    images: [
+      premiumDesignerSaree1,
+      premiumDesignerSaree2,
+      premiumDesignerSaree3,
+      premiumDesignerSaree4,
+    ],
     category: "Designer Sarees",
     color: "pink",
     fabricCategory: "Georgette",
-    description: "Premium handcrafted designer saree featuring a spectacular pink shine.",
+    description:
+      "Premium handcrafted designer saree featuring a spectacular pink shine.",
     brand: "Saree Mahal",
     fabric: "Premium Georgette",
     blousePiece: "Included",
@@ -432,7 +489,11 @@ const productList = [
     rating: 4.6,
     reviews: 96,
     sizes: ["Free Size"],
-    features: ["Intricate hand embroidery", "Chic sequin pattern", "Ultra-luxurious fall"],
+    features: [
+      "Intricate hand embroidery",
+      "Chic sequin pattern",
+      "Ultra-luxurious fall",
+    ],
     offers: [
       {
         id: 1,
@@ -447,8 +508,8 @@ const productList = [
         type: "UPI",
         text: "Extra ₹400 Off via any UPI app payment.",
         terms: "Min. purchase: ₹3,500. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 10,
@@ -457,11 +518,18 @@ const productList = [
     originalPrice: 3999,
     discount: "25% OFF",
     banner: specialFestiveSaree1,
-    images: [specialFestiveSaree1, specialFestiveSaree2, specialFestiveSaree3, specialFestiveSaree4],
+    images: [
+      specialFestiveSaree1,
+      specialFestiveSaree2,
+      specialFestiveSaree3,
+      specialFestiveSaree4,
+    ],
     category: "Festive Sarees",
     color: "green",
     fabricCategory: "Chiffon",
-    description: "Gorgeous green chiffon saree adorned with rich borders, optimized for festival comfort.",
+    tag: "new",
+    description:
+      "Gorgeous green chiffon saree adorned with rich borders, optimized for festival comfort.",
     brand: "Saree Mahal",
     fabric: "Pure Chiffon",
     blousePiece: "Included",
@@ -472,7 +540,11 @@ const productList = [
     rating: 4.5,
     reviews: 128,
     sizes: ["Free Size"],
-    features: ["Golden thread border", "Hand-dyed fabric", "Extremely lightweight"],
+    features: [
+      "Golden thread border",
+      "Hand-dyed fabric",
+      "Extremely lightweight",
+    ],
     offers: [
       {
         id: 1,
@@ -487,8 +559,8 @@ const productList = [
         type: "UPI",
         text: "Extra 5% Instant Discount up to ₹250 on all UPI payments.",
         terms: "T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 11,
@@ -497,11 +569,17 @@ const productList = [
     originalPrice: 4499,
     discount: "27% OFF",
     banner: diwaliFestiveSaree1,
-    images: [diwaliFestiveSaree1, diwaliFestiveSaree2, diwaliFestiveSaree3, diwaliFestiveSaree4],
+    images: [
+      diwaliFestiveSaree1,
+      diwaliFestiveSaree2,
+      diwaliFestiveSaree3,
+      diwaliFestiveSaree4,
+    ],
     category: "Festive Sarees",
-    color: "blue",
+    color: "pink",
     fabricCategory: "Chiffon",
-    description: "Exclusive deep blue Chiffon saree designed specifically for sparkling Diwali evenings.",
+    description:
+      "Exclusive deep blue Chiffon saree designed specifically for sparkling Diwali evenings.",
     brand: "Saree Mahal",
     fabric: "Pure Chiffon",
     blousePiece: "Included",
@@ -512,7 +590,11 @@ const productList = [
     rating: 4.7,
     reviews: 154,
     sizes: ["Free Size"],
-    features: ["Silver zari threads", "Luminous night texture", "Featherlight comfort"],
+    features: [
+      "Silver zari threads",
+      "Luminous night texture",
+      "Featherlight comfort",
+    ],
     offers: [
       {
         id: 1,
@@ -527,8 +609,8 @@ const productList = [
         type: "UPI",
         text: "Extra ₹200 Off via PhonePe/Paytm.",
         terms: "Min. purchase: ₹2,500. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 12,
@@ -537,11 +619,18 @@ const productList = [
     originalPrice: 8499,
     discount: "29% OFF",
     banner: goldBanarasiSaree1,
-    images: [goldBanarasiSaree1, goldBanarasiSaree2, goldBanarasiSaree3, goldBanarasiSaree4],
+    images: [
+      goldBanarasiSaree1,
+      goldBanarasiSaree2,
+      goldBanarasiSaree3,
+      goldBanarasiSaree4,
+    ],
     category: "Banarasi Sarees",
     color: "yellow",
     fabricCategory: "cotton",
-    description: "A breathtaking golden Banarasi saree handcrafted by legacy weavers.",
+    tag: "new",
+    description:
+      "A breathtaking golden Banarasi saree handcrafted by legacy weavers.",
     brand: "Saree Mahal",
     fabric: "Premium Banarasi Silk-Cotton",
     blousePiece: "Included (0.8m)",
@@ -552,7 +641,11 @@ const productList = [
     rating: 4.9,
     reviews: 210,
     sizes: ["Free Size"],
-    features: ["Heavy golden zari weave", "Legacy craftsmanship", "Stiff royal drape"],
+    features: [
+      "Heavy golden zari weave",
+      "Legacy craftsmanship",
+      "Stiff royal drape",
+    ],
     offers: [
       {
         id: 1,
@@ -574,8 +667,8 @@ const productList = [
         type: "UPI",
         text: "Flat ₹500 Off on any UPI payment.",
         terms: "Min. purchase: ₹5,000. T&C Apply.",
-      }
-    ]
+      },
+    ],
   },
   {
     id: 13,
@@ -586,9 +679,10 @@ const productList = [
     banner: traditionalBanarasiSaree1,
     images: [traditionalBanarasiSaree1, traditionalBanarasiSaree2],
     category: "Banarasi Sarees",
-    color: "orange",
+    color: "green",
     fabricCategory: "cotton",
-    description: "Classic Banarasi weaving in deep orange hues reflecting timeless culture.",
+    description:
+      "Classic Banarasi weaving in deep orange hues reflecting timeless culture.",
     brand: "Saree Mahal",
     fabric: "Banarasi Cotton-Silk",
     blousePiece: "Included",
@@ -614,9 +708,9 @@ const productList = [
         type: "UPI",
         text: "Extra ₹300 Off on all UPI mobile app payments.",
         terms: "Min. purchase: ₹3,000. T&C Apply.",
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
 
 export { productList };

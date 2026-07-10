@@ -135,3 +135,18 @@
     font-size: 1.1rem;
   }
 }
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #d1d5db;
+  font-size: 15px;
+}
+
+.contact-icon {
+  color: #d63384; /* Pink */
+  font-size: 16px;
+  min-width: 16px;
+}

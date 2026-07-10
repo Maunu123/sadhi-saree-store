@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import {useContext} from "react";
 import './Wishlist.css';
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
@@ -10,6 +10,8 @@ const {
     moveWishlistToCart,
   } = useContext(CartContext);
 
+  
+
   return (
     <div className="wishlist-page">
       <h1>My Wishlist</h1>
@@ -19,7 +21,7 @@ const {
       ) : (
         wishlist.map((item) => (
           <div key={item.id} className="wishlist-item">
-            <Link to={`/details/${item.id}`}>
+            <Link to={`/shop-details/${item.id}`}>
               <img
                 src={item.banner}
                 alt={item.name}
@@ -31,23 +33,25 @@ const {
 
               <p>₹{item.price}</p>
 
-              <button
-                className="cart-btn"
-                onClick={() =>
-                  moveWishlistToCart(item)
-                }
-              >
-                Add To Cart
-              </button>
+              <div className="wishlist-actions">
+                <button
+                  className="cart-btn"
+                  onClick={() =>
+                    moveWishlistToCart(item)
+                  }
+                >
+                  Add To Cart
+                </button>
 
-              <button
-                className="remove-btn"
-                onClick={() =>
-                  removeFromWishlist(item.id)
-                }
-              >
-                Remove
-              </button>
+                <button
+                  className="remove-btn"
+                  onClick={() =>
+                    removeFromWishlist(item.id)
+                  }
+                >
+                  Remove
+                </button>
+              </div>
             </div>
           </div>
         ))

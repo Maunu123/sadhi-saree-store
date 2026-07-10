@@ -1,0 +1,38 @@
+.policy-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.policy-page h1 {
+  text-align: center;
+  color: #b03060;
+  margin-bottom: 30px;
+}
+
+.policy-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.policy-section h3 {
+  margin-top: 25px;
+  color: #333;
+}
+
+.policy-section p {
+  margin-top: 8px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.policy-section ul {
+  margin: 10px 0 20px 20px;
+}
+
+.policy-section li {
+  margin-bottom: 8px;
+  color: #666;
+}

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import { FiHeart, FiShoppingBag } from "react-icons/fi";
 import { FaSearch, FaUser } from "react-icons/fa";
 
@@ -42,9 +42,9 @@ const Navbar = () => {
 
       {/* Navigation */}
       <div className="page-link">
-        <Link to="/">Home</Link>
-        <Link to="/shop">Shop</Link>
-        <Link to="/new-arrival">New Arrival</Link>
+        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/shop">Shop</NavLink>
+        <NavLink to="/new-arrival">New Arrival</NavLink>
       </div>
 
       {/* Right Side Icons */}
@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className="search-box">
             <input
               type="text"
-              placeholder="Search sarees..."
+              placeholder="Search collection"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => {
@@ -69,11 +69,11 @@ const Navbar = () => {
         )}
 
         {/* User */}
-        <Link to={currentUser ? "/user" : "/login"} className="user-icon">
+        <Link to={currentUser ? "/user" : "/login"} className="user-icon nav-round-icon">
           <FaUser className="icon" />
         </Link>
         {/* Wishlist */}
-        <Link to="/wishlist" className="wishlist-icon">
+        <Link to="/wishlist" className="wishlist-icon nav-round-icon">
           <FiHeart />
 
           {wishlistCount > 0 && (
@@ -82,7 +82,7 @@ const Navbar = () => {
         </Link>
 
         {/* Cart */}
-        <Link to="/cart" className="cart-icon">
+        <Link to="/cart" className="cart-icon nav-round-icon">
           <FiShoppingBag />
 
           {cartCount > 0 && <span className="cart-count">{cartCount}</span>}

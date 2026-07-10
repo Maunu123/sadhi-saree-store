@@ -240,27 +240,9 @@
   margin-bottom: 6px;
 }
 
-.checkout-input-field input,
-.checkout-input-field textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  outline: none;
-  font-size: 14px;
-  transition: 0.3s;
-  box-sizing: border-box;
-}
-
-.checkout-input-field textarea {
+.checkout-input-field textarea.form-input {
   height: 90px;
   resize: vertical;
-}
-
-.checkout-input-field input:focus,
-.checkout-input-field textarea:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 6px rgba(255, 63, 108, 0.15);
 }
 
 .checkout-input-grid {
@@ -316,7 +298,7 @@
 }
 
 .place-order-btn {
-  flex: 1.5;
+  flex: 1;
   padding: 15px;
   border: none;
   border-radius: 10px;
@@ -336,28 +318,66 @@
   width: 100%;
   padding: 14px;
   margin-top: 20px;
-  background: #ff3f6c;
+  background: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .continue-btn:hover {
-  background: #e6365f;
+  background: var(--primary-color-hover);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 63, 108, 0.25);
 }
 
 .continue-btn:active {
   transform: scale(0.98);
 }
+.checkout-address{
+margin-bottom:30px;
+}
+
+.address-card{
+border:1px solid #ddd;
+padding:18px;
+border-radius:10px;
+margin-bottom:15px;
+cursor:pointer;
+transition:.3s;
+background:white;
+}
+
+.address-card:hover{
+border-color:#ff3f6c;
+}
+
+.address-card.selected{
+border:2px solid #ff3f6c;
+background:#fff4f7;
+}
+
+.address-card h4{
+margin-bottom:8px;
+color:#282c3f;
+}
+
+.address-card p{
+margin:5px 0;
+color:#666;
+}
 
 @media (max-width: 768px) {
+  .checkout-page-container {
+    padding: 24px 12px;
+  }
+
   .checkout-content {
     padding: 25px 20px;
+    border-radius: 14px;
   }
   
   .checkout-input-grid {
@@ -372,5 +392,139 @@
   
   .checkout-address-cards {
     grid-template-columns: 1fr;
+  }
+
+  .address-scroll-container {
+    gap: 14px;
+  }
+
+  .checkout-addr-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-content {
+    padding: 20px 14px;
+  }
+
+  .checkout-content h1 {
+    font-size: 24px;
+  }
+
+  .login-welcome-banner {
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .checkout-addr-card {
+    min-width: 245px;
+    max-width: 245px;
+    padding: 14px;
+  }
+
+  .continue-btn {
+    font-size: 15px;
+  }
+}
+
+
+.address-scroll-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.address-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.address-scroll-container::-webkit-scrollbar-thumb {
+  background: #ff3f6c;
+  border-radius: 20px;
+}
+
+.checkout-addr-card {
+  min-width: 330px;
+  max-width: 330px;
+  flex-shrink: 0;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 18px;
+  cursor: pointer;
+  transition: .3s;
+  background: #fff;
+}
+
+.checkout-addr-card:hover {
+  border-color: #ff3f6c;
+  transform: translateY(-3px);
+}
+
+.active-card {
+  border: 2px solid #ff3f6c;
+  background: #fff4f6;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label-badge {
+  background: #ff3f6c;
+  color: white;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .checkout-page-container {
+    padding: 24px 12px;
+  }
+
+  .checkout-content {
+    padding: 25px 20px;
+    border-radius: 14px;
+  }
+
+  .address-scroll-container {
+    gap: 14px;
+  }
+
+  .checkout-addr-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-content {
+    padding: 20px 14px;
+  }
+
+  .checkout-content h1 {
+    font-size: 24px;
+  }
+
+  .login-welcome-banner {
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .checkout-addr-card {
+    min-width: 245px;
+    max-width: 245px;
+    padding: 14px;
+  }
+
+  .continue-btn {
+    font-size: 15px;
   }
 }

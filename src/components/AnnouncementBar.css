@@ -1,0 +1,58 @@
+.announcement-bar {
+  background: var(--primary-color);
+  color: white;
+  height: 38px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 35px;
+  animation: slide-marquee 30s linear infinite;
+  padding-left: 35px;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.marquee-separator {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* Perfect translation loop of half the duplicated width */
+@keyframes slide-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Pause scroll on hover to make it extra interactive and readable */
+.announcement-bar:hover .marquee-content {
+  animation-play-state: paused;
+}

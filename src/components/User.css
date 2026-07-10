@@ -40,7 +40,7 @@
   gap: 20px;
 }
 
-.card {
+.user-card {
   background: var(--white);
   border: 1px solid var(--light-gray-border);
   border-radius: 14px;
@@ -55,12 +55,12 @@
   transition: 0.3s;
 }
 
-.card svg {
+.user-card svg {
   font-size: 34px;
   color: var(--primary-color);
 }
 
-.card:hover {
+.user-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
@@ -128,21 +128,8 @@
   padding: 20px;
 }
 
-.edit-profile .edit-wrapper input {
-  width: 100%;
-  padding: 13px 15px;
+.edit-profile .edit-wrapper .form-input {
   margin-bottom: 15px;
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  outline: none;
-  font-size: 15px;
-  transition: 0.3s;
-  box-sizing: border-box;
-}
-
-.edit-profile .edit-wrapper input:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 8px rgba(255, 63, 108, 0.15);
 }
 
 /* ================= Buttons ================= */

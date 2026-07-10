@@ -43,19 +43,20 @@
   margin-top: 25px;
   width: 100%;
   padding: 14px;
-  background: #ff3f6c;
+  background: var(--primary-color);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .success-btn:hover {
-  background: #e6365f;
+  background: var(--primary-color-hover);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 63, 108, 0.25);
 }
 
 .success-btn:active {
